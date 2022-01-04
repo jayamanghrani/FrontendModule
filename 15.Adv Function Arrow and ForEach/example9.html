@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function A Callback</title>
+    <script>
+        function area(radius, show) {
+            let ar = 3.14 * (radius * radius);
+            show(ar);
+        }
+
+        area(5, (result) => {
+            document.write(`Area of circle is ${result}`);
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

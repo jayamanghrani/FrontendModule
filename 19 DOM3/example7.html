@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Setting And Getting Html Attribute</title>
+    <script>
+        var prevImage;
+
+        function changeLogo() {
+            let image = document.querySelector("img");
+            if (image.getAttribute("src").indexOf("2") == -1) {
+                prevImage = image.getAttribute("src");
+                image.setAttribute("src", "../images/sachin2.jpg");
+            } else {
+                image.setAttribute("src", prevImage);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>My Pic</h3>
+    <img src="../images/sachin.jpg"><br>
+    <input type="button" value="Change Logo" onclick="changeLogo()" />
+</body>
+
+</html>

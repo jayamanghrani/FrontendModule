@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Event Demo</title>
+    <script>
+        function changeColor() {
+            this.style.color = "red";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="mydiv">
+        Hello User
+    </div>
+    <script>
+        let x = document.getElementById("mydiv");
+        x.onclick = changeColor;
+    </script>
+</body>
+
+</html>

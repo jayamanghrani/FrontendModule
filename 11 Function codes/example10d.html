@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Function Demo</title>
+    <script>
+        var fnid;
+
+        function start() {
+            fnid = setInterval(function() {
+                console.log(new Date());
+            }, 2000);
+        }
+
+        function stop() {
+            clearInterval(fnid);
+            console.log("stopped!");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" onclick="start()" value="start">
+    <input type="button" onclick="stop()" value="stop">
+
+
+
+</body>
+
+</html>

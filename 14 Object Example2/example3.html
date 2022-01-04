@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programming Challenge</title>
+    <script>
+        let company = {
+            name: "Apple",
+            foundationYear: 1976,
+            productsList: [{
+                name: "IPhone",
+                year: 2007
+
+            }, {
+                name: "IPad",
+                year: 2010
+
+            }],
+            foundedBy: ["Steve Jobs", "Steve Wozniak"],
+            ceo: "Steve Jobs",
+            createNewProduct: function(product) {
+                company.productsList.push(product);
+            },
+            resign: function() {
+                str = company.ceo;
+                company.ceo = null;
+                return str;
+            },
+            hireCeo: function(name) {
+                company.ceo = name;
+            },
+            toString: function() {
+                let productDetails = "";
+                for (let p of company.productsList) {
+                    productDetails += p.name + "-" + p.year + ",";
+                }
+
+                return `<strong>name:</strong>${company.name}<br><strong>Foundation Year:</strong>${company.foundationYear}<br><strong>Founders:</strong>${company.foundedBy.join(",")}<br><strong>CEO:</strong>${company.ceo}<br><strong>Products:</strong>${productDetails}<br>`;
+
+            }
+        }
+    </script>
+    <script>
+        document.write("<h3>Company Details</h3>");
+        document.write(company);
+        document.write("<br><br>CEO:" + company.resign() + " Resigned");
+        document.write("<h3>After CEO's resignation</h3>");
+        document.write(company);
+        company.hireCeo("Tim Cook");
+        document.write("<h3>After hiring new CEO</h3>");
+        document.write(company);
+        document.write("<h3>After adding new product</h3>");
+        company.createNewProduct({
+            name: 'IHome',
+            year: 2020
+        });
+        document.write(company);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

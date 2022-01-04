@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creating Nested Object Using Object Literal</title>
+    <script>
+        let  student  =   { 
+            name:   "Sumit",
+            age:  15,
+             phy:  45,
+            chem:  50,
+            maths:  65        
+        };
+        let total = 0;
+        for (let key in student) {
+            if (key !== 'name' && key !== 'age')
+                total = total + student[key];
+        }
+        document.write("Total is " + total);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

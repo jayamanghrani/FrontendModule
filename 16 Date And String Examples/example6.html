@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function show() {
+
+            let text = "sunday is a fun day";
+            let firstIndex = text.indexOf("day");
+            let lastIndex = text.lastIndexOf("day");
+            document.write(`The first index of 'day' in ${text} is ${firstIndex}<br>`);
+            document.write(`The last index of 'day' in ${text} is ${lastIndex}<br>`);
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="click me" onclick="show()">
+</body>
+
+</html>

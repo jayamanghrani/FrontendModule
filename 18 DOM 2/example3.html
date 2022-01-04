@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Understanding innerText</title>
+    <script>
+        function operate() {
+            let ul = document.querySelector('ul');
+            let listItems = ul.querySelectorAll('li');
+            listItems.forEach(item => {
+                item.innerHTML = "<strong>" + item.innerHTML + "</strong>";
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Welcome To SCA</h2>
+    <h3>Our Mission</h3>
+    <p>The mission of the SHARMA COMPUTER ACADEMY is to provide its students with the foundation for lifelong learning
+    </p>
+    <h3>Our Courses</h3>
+    <ul>
+        <li><i>C</i></li>
+        <li><i>C++</i></li>
+        <li><i>Python</i></li>
+        <li><i>Django</i></li>
+    </ul>
+    <input type="button" value="Click me" onclick="operate()" />
+</body>
+
+</html>

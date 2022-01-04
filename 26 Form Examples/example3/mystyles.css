@@ -1,0 +1,22 @@
+th {
+    text-align: right;
+}
+
+.modify {
+    position: relative;
+    left: 120px;
+}
+
+caption {
+    margin-bottom: 10px;
+}
+
+.error {
+    outline: none;
+    border: solid 2px crimson;
+}
+
+.success {
+    outline: none;
+    border: solid 2px limegreen;
+}

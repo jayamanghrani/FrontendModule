@@ -1,0 +1,12 @@
+th {
+    text-align: right;
+}
+
+.modify {
+    position: relative;
+    left: 120px;
+}
+
+caption {
+    margin-bottom: 10px;
+}

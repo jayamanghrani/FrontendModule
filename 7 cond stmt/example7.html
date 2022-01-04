@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>switch demo</title>
+    <script>
+        let a, str;
+        a = prompt("enter a number");
+        a = Number(a);
+        switch (a % 2) {
+            case 0:
+                str = "No is even";
+                break;
+            case 1:
+                str = "No is odd";
+                break;
+            default:
+                str = "You did not enter a number";
+        }
+        document.write(`${str}`);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converting Values To Number</title>
+    <script>
+        let x = '123.9';
+        document.write(x + ' ' + typeof x + '<br>'); // string
+
+        let y = Number(x); // now value is a number 123.6
+        document.write(y + ' ' + typeof y + '<br>'); // number
+
+        let z = parseInt(x);
+        document.write(z + ' ' + typeof z + '<br>'); // number
+
+        let k = Math.floor(x);
+        document.write(k + ' ' + typeof k + '<br>'); // number
+
+        let m = parseFloat(x);
+        document.write(m + ' ' + typeof m + '<br>'); // number
+    </script>
+</head>
+
+<body></body>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>If Demo</title>
+    <script>
+        let a;
+        a = prompt("enter a  number ");
+        if (isNaN(a))
+            document.write("You did not input a number");
+        else {
+            // b = parseInt(a);
+            // c = parseFloat(a);
+            b = Number(a);
+            c = Number(b.toFixed(0));
+
+
+            if (b === c)
+                document.write("You entered int");
+            else
+                document.write("you entered float");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

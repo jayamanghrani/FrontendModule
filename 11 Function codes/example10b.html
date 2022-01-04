@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Function Demo</title>
+    <script>
+        function showmessage() {
+            console.log(new Date());
+        }
+
+        function start() {
+            x = setInterval(showmessage, 2000);
+        }
+
+        function stop() {
+            clearInterval(x);
+            console.log("stopped!");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" onclick="start()" value="start">
+    <input type="button" onclick="stop()" value="stop">
+</body>
+
+</html>

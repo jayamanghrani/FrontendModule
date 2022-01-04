@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>For Loop Demo</title>
+    <script>
+        let n = Number(prompt("enter a number"));
+        let ev, od, i;
+        ev = od = 0;
+        for (i = 1; i <= n; i++) {
+            if (i % 2 == 0) ev = ev + i;
+            else od = od + i;
+        }
+        document.write(`Sum of even numbers is ${ev} <br>`);
+        document.write(`Sum of odd numbers is ${od}`);
+    </script>
+</head>
+
+<body></body>
+
+</html>

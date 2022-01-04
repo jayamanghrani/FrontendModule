@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Underatnding style</title>
+    <script>
+        function decorate() {
+            let elements = document.querySelectorAll(".highlight");
+            elements.forEach(item => {
+                item.style.border = "solid 2px red";
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="nav1" class="highlight">
+        <li>Home</li>
+        <li>Products</li>
+        <li>Services</li>
+        <li>Contact</li>
+        <li>About Us</li>
+    </ul>
+    <ul id="nav2" class="highlight">
+        <li>Books</li>
+        <li>Mobiles</li>
+        <li>Laptops</li>
+    </ul>
+    <ul id="nav3" class="highlight">
+        <li>Accesories</li>
+        <li>Clothes</li>
+        <li>Pens</li>
+        <li>Diaries</li>
+    </ul>
+
+    <input type="button" value="Add Border" onclick="decorate();">
+</body>
+
+</html>

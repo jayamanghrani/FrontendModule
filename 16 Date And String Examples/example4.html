@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function show() {
+
+            let text = prompt("Type a string");
+            let first = text.charCodeAt(0);
+            document.write(`The unicode of first character of ${text} is ${first}<br>`);
+            let len = text.length;
+            let last = text.charCodeAt(len - 1);
+            document.write(`The unicode of last character of ${text} is ${last}<br>`);
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="click me" onclick="show()">
+</body>
+
+</html>

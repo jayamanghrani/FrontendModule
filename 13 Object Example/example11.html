@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nested Object</title>
+    <script>
+        let myCar = new Object();
+        myCar.model = "Baleno";
+        myCar.year = 2014;
+
+        myCar.stereo = new Object();
+        myCar.stereo.name = "KenWood";
+        myCar.stereo.maxVol = 30;
+
+        console.log(myCar);
+        console.log(myCar.model);
+        console.log(myCar.year);
+        console.log(myCar.stereo.name);
+        console.log(myCar['stereo']['maxVol']);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

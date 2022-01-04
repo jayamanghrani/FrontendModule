@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Understanding setAttribute</title>
+    <script>
+        function showLink() {
+            let sitename = prompt("Enter website name:")
+            let a = document.querySelector("a");
+            a.setAttribute("href", "http://www." + sitename);
+            let dotpos = sitename.indexOf(".");
+            let name = sitename.substring(0, dotpos);
+            a.innerText = "Visit " + name;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Generate Website Link</h3>
+    <input type="button" value="Create Website Link" onclick="showLink()" />
+    <br>
+    <a></a>
+</body>
+
+</html>

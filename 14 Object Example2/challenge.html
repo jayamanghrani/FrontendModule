@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let company = {
+            name: "Apple",
+            foundationYear: 1976,
+            productsList: [{
+                name: "IPhone",
+                year: 2007
+            }, {
+                name: "IPad",
+                year: 2010
+            }],
+            foundedBy: ["Steve Jobs", "Steve Wozniak"],
+            ceo: "Steve Jobs",
+            createNewProduct: function(product) {
+                company.productsList.push(product);
+
+            },
+            resign: function() {
+                str = company.ceo;
+                company.ceo = null;
+                return str;
+            },
+            hireCeo: function(name) {
+                company.ceo = name;
+            },
+            toString: function() {
+                let str = "";
+                for (p of company.productsList) {
+                    str = str + p.name + "-" + p.year + ",";
+                }
+
+                return `<strong>name:</strong>${company.name}<br>
+            <strong>foundation year</strong>${company.foundationYear}
+            <br><strong>founders:</strong>${company.foundedBy.join(",")}
+            <br><strong>CEO:</strong>${company.ceo}<br>
+            <strong>Products:</strong>${str}`;
+
+            }
+        }
+    </script>
+    <script>
+        document.write("<h3>Company details</h3>");
+        document.write(company);
+        document.write("<br><br>CEO:" + company.resign() + " resigned");
+        document.write("<h3>After CEO's Resignation</h3>");
+        document.write(company);
+        company.hireCeo("Tim Cook");
+        document.write("<h3>After Hiring New CEO</h3>");
+        document.write(company);
+        company.createNewProduct({
+            name: "Ihome",
+            year: 2020
+        });
+        document.write("<h3>After Adding New Product</h3>");
+        document.write(company);
+    </script>
+    </body>
+
+</html>

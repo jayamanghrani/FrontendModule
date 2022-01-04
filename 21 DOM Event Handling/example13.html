@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function showDate() {
+            let div = document.querySelector("div");
+            let today = new Date();
+            div.append(today.toDateString());
+        }
+    </script>
+</head>
+
+<body>
+    <div id="d1">
+
+    </div>
+    <input type="button" value="Display Date" onclick="showDate();">
+</body>
+
+</html>

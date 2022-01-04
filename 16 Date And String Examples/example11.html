@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script type="text/javascript">
+        function show() {
+            let str;
+            let vowels = [];
+            str = prompt("enter a string");
+            let ch, count = 0;
+            for (var i = 0; i < str.length; i++) {
+                ch = str.charAt(i);
+                switch (ch) {
+                    case "A":
+                    case "E":
+                    case "I":
+                    case "O":
+                    case "U":
+                        count++;
+                        vowels[vowels.length] = ch;
+                }
+            }
+            document.write(`${str} contains ${count}vowels`);
+            for (i = 0; i < vowels.length; i++)
+                alert(vowels[i]);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Find Vowels" onclick="show();"><br>
+</body>
+
+</html>

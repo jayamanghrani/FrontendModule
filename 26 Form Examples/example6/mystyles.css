@@ -1,0 +1,9 @@
+.error {
+    outline: none;
+    border: solid 2px crimson;
+}
+
+.success {
+    outline: none;
+    border: solid 2px limegreen;
+}

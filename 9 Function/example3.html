@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Function Demo</title>
+    <script>
+        function greetings() {
+            alert(`Function called with ${arguments.length} arguments`);
+            for (let name of arguments)
+                alert(`Good Evening ${name}`);
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        //greetings("sachin", "amit", "Ravi", "Varun");
+        //greetings("Ajay", "Kumar");
+        greetings();
+    </script>
+</body>
+
+</html>

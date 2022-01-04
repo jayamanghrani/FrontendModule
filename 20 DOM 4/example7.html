@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function addList() {
+            //Write code to generate programming languages list
+            let languages = ["C", "C++", "Python", "Java", "JavaScript"];
+            let div = document.querySelector("div");
+            let mylist = document.createElement("ul");
+            languages.forEach(name => {
+                mylist.innerHTML += "<li>" + name + "</li>";
+            });
+            div.appendChild(mylist);
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="d1">
+
+    </div>
+    <input type="button" value="show languages" onclick="addList()">
+
+</body>
+
+</html>

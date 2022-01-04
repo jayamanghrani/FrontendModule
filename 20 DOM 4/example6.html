@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function addPara() {
+            // Add a new para with the text indicating its position in div
+            let div = document.querySelector("div");
+            let newpara = document.createElement("p");
+            let newtext = document.createTextNode(`I am para ${div.children.length+1}`);
+            newpara.appendChild(newtext);
+            div.appendChild(newpara);
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="d1">
+        <p id="p1">
+            I am para 1
+        </p>
+        <p id="p2">
+            I am para 2.
+        </p>
+    </div>
+    <input type="button" value="add new para" onclick="addPara();">
+</body>
+
+</html>

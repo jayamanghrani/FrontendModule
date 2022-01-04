@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Undesrstanding toString()</title>
+    <script>
+        let myCar = new Object();
+        myCar.company = "Maruti";
+        myCar.model = "Baleno";
+        myCar.year = 2014;
+        myCar.toString = function() {
+            return `${myCar.company},${myCar.model},${myCar.year}`;
+        }
+        document.write(myCar);
+        let currentDate = new Date();
+        let myArray = new Array(1, 2, 3, 4);
+        document.write("<br>");
+        document.write(currentDate);
+        document.write("<br>");
+        document.write(myArray);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programming Challenge!</title>
+    <script>
+        let student = {
+            name: "Sumit",
+            age: 15,
+            phy: 45,
+            chem: 50,
+            maths: 65
+        };
+        let sum = 0;
+        for (key in student) {
+            if (typeof student[key] === 'number') {
+                if (key !== 'age')
+                    sum = sum + student[key];
+
+            }
+
+        }
+        document.write(`<br>Total:${sum}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

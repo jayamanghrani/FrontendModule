@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Sharma Computer Academy</title>
+    <style>
+        .highlight {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function operate() {
+            // Add the class highlight to all children of div
+            let div = document.querySelector("div");
+            let children = div.children;
+            Array.from(children).forEach(item => {
+                item.classList.add("highlight");
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome To SCA</h2>
+        <p>The mission of the SHARMA COMPUTER ACADEMY is to provide its students with the foundation for lifelong learning
+        </p>
+        <h3>Our Courses</h3>
+        <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>Django</li>
+            <li>Java</li>
+            <li>Oracle</li>
+        </ul>
+    </div>
+    <input type="button" value="Click me" onclick="operate()" />
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function show() {
+
+            let text = prompt("Type a string");
+            let search = prompt("Type string to search");
+            let repl = prompt("Type string to replace");
+            do {
+                let pos = text.indexOf(search);
+                if (pos == -1)
+                    break;
+                text = text.replace(search, repl);
+            } while (true);
+            document.write(`Modified string is:${text}`);
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="click me" onclick="show()">
+</body>
+
+</html>

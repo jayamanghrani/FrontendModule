@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Sharma Computer Academy</title>
+    <style>
+        .highlight {
+            color: red;
+        }
+    </style>
+    <script>
+        function operate() {
+            let heading = document.querySelector("h2");
+            let attr = heading.getAttributeNode("class").nodeValue;
+            let para = document.querySelector("p");
+            para.innerHTML = attr;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2 class="highlight">Welcome To SCA</h2>
+
+
+    </div>
+    <input type="button" value="Click me" onclick="operate()" />
+    <p>
+
+    </p>
+</body>
+
+</html>

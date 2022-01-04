@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Ternary Operator Demo</title>
+    <script>
+        let a, str;
+        a = prompt("enter an integer ");
+        if (isNaN(a) == false) {
+            a = Number(a);
+            str = (a % 2) == 0 ? "Number is even" : "Number is odd";
+        } else {
+            str = "You did not enter a number";
+        }
+        document.write(`${str}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

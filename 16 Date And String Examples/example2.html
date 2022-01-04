@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Calculating Day Of BirthDay</title>
+    <script>
+        function show() {
+            let str = prompt("enter your dob(month dd,yyyy)");
+            let dob = new Date(str);
+            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            document.write(`You were born on ${days[dob.getDay()]}`);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Show My Birth Day" onclick="show();"><br>
+
+</body>
+
+</html>

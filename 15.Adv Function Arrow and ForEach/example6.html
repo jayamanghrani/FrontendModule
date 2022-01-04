@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function With this</title>
+    <script>
+      let person = {
+        fname: "Amit",
+        age: 21,
+        toString: () => {
+          return `${this.fname},${this.age}`;
+        },
+      };
+      document.write(person.fname);
+    </script>
+  </head>
+
+  <body></body>
+</html>

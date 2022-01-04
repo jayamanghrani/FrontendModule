@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function addPara() {
+            let div = document.querySelector("div");
+            let newPara1 = document.createElement("p");
+            newPara1.innerText = "I am third para";
+            let newPara2 = document.createElement("p");
+            newPara2.innerText = "I am fourth para";
+            div.append("Welcome", newPara1, "JavaScript Rocks!!", newPara2);
+
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="d1">
+        <p id="p1">
+            I am para 1
+        </p>
+        <p id="p2">
+            I am para 2.
+        </p>
+    </div>
+    <input type="button" value="add new para" onclick="addPara();">
+</body>
+
+</html>

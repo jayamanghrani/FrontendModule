@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Function Demo</title>
+    <script>
+        function average() {
+            let sum = 0;
+            for (let n of arguments) {
+                sum += n;
+            }
+            document.write(`sum is ${sum}<br>`);
+            document.write(`avg is ${sum / arguments.length}`);
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        average(5, 20, 9, 11);
+    </script>
+</body>
+
+</html>

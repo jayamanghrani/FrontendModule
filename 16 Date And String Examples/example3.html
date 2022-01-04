@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function show() {
+
+            let text = prompt("Type a string");
+            let len = text.length;
+            document.write(`The length of ${text} is ${len}<br>`);
+
+            let first = text.charAt(0);
+            document.write(`The first character of ${text} is ${first}<br>`);
+
+            let last = text.charAt(len - 1);
+            document.write(`The last character of ${text} is ${last}<br>`);
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="click me" onclick="show()">
+</body>
+
+</html>

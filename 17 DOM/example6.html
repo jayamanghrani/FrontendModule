@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Java Script Demo</title>
+    <script>
+        function show() {
+            // Write code to access all <li> tag of <ul> with id "nav2"
+            let nav = document.getElementById("nav2");
+            let li = nav.getElementsByTagName("li");
+            let arr = Array.from(li);
+            arr.forEach(x => {
+                console.log(x);
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <ul id="nav1">
+        <li>Company Profile</li>
+        <li>Investors</li>
+        <li>Share Market</li>
+        <li>Stock Price</li>
+        <li>Portfolio</li>
+    </ul>
+    <ul id="nav2">
+        <li>Home</li>
+        <li>Products</li>
+        <li>Services</li>
+        <li>Contact</li>
+        <li>About Us</li>
+    </ul>
+    <input type="button" value="click me" onclick="show();">
+</body>
+
+</html>

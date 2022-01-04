@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Understanding innerText</title>
+    <script>
+        function operate() {
+            // Write the code to convert text of all course names to uppercase
+            let ul = document.querySelector("ul");
+            let listitems = ul.querySelectorAll("li");
+            listitems.forEach(x => {
+                x.innerText = x.innerText.toUpperCase();
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Welcome To SCA</h2>
+    <h3>Our Mission</h3>
+    <p>The mission of the SHARMA COMPUTER ACADEMY is to provide its students with the foundation for lifelong learning
+    </p>
+    <h3>Our Courses</h3>
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Django</li>
+        <li>Java</li>
+        <li>Oracle</li>
+    </ul>
+    <input type="button" value="Click me" onclick="operate()" />
+</body>
+
+</html>

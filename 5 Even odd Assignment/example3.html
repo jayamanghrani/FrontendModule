@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>If Demo</title>
+    <script>
+        let a;
+        let str = "You entered ";
+        a = prompt("enter a number");
+        if (isNaN(a))
+            str = " You did not input a numeric value";
+        else {
+            a = Number(a);
+            if (a < 0)
+                str += "a negative number";
+            else if (a <= 9)
+                str += "a single digit number";
+            else if (a <= 99)
+                str += "a double digit number";
+            else
+                str += "a number with 3 or more digits";
+        }
+
+        document.write(`${str}`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
