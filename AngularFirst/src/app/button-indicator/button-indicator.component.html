@@ -1,0 +1,160 @@
+<div class="button" style="background-color: rgb(252, 252, 247)">
+  <button mat-button color="primary">Click me!</button>
+
+  <h3>Raised Buttons</h3>
+  <div class="example-button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button routerLink=".">Link</a>
+  </div>
+
+  <h3>Stroked Buttons</h3>
+  <div class="example-button-row">
+    <button mat-stroked-button>Basic</button>
+    <button mat-stroked-button color="primary">Primary</button>
+    <button mat-stroked-button color="accent">Accent</button>
+    <button mat-stroked-button color="warn">Warn</button>
+    <button mat-stroked-button disabled>Disabled</button>
+    <a mat-stroked-button routerLink=".">Link</a>
+  </div>
+
+  <h3>Icon Buttons</h3>
+  <div class="example-button-row">
+    <button mat-icon-button>
+      <mat-icon aria-label="Example icon-button with a heart icon"
+        >favorite</mat-icon
+      >
+    </button>
+  </div>
+
+  <h3>Fab Buttons</h3>
+  <div class="example-button-row">
+    <button mat-fab>Basic</button>
+    <button mat-fab color="primary">Primary</button>
+  </div>
+</div>
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div style="background-color: rgb(196, 177, 150)">
+  <h2>Badge</h2>
+  <p>
+    <span matBadge="4">Text with a badge</span>
+  </p>
+
+  <p>
+    Icon with a badge
+    <mat-icon matBadge="15" matBadgeColor="warn" matBadgeSize="large"
+      >home</mat-icon
+    >
+  </p>
+
+  <p>
+    Icon with a badge
+    <mat-icon matBadge="15" matBadgeColor="warn" matBadgeSize="small"
+      >smile</mat-icon
+    >
+  </p>
+
+  <!-- Badge content dynamically will work with mat icon only-->
+  <mat-icon [matBadge]="badgeCounter">Notification</mat-icon>
+  <button mat-button (click)="incrementCount()">Increase</button>
+  <br />
+  <br /><br />
+  <button
+    mat-raised-button
+    color="primary"
+    matBadge="8"
+    matBadgePosition="before"
+    matBadgeColor="accent"
+  >
+    Action
+  </button>
+  <br />
+</div>
+
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div style="background-color: rgb(212, 228, 245)">
+  <h2>Chips</h2>
+  <mat-chip-list>
+    <mat-chip>Chip 1</mat-chip>
+    <mat-chip>Chip 2</mat-chip>
+  </mat-chip-list>
+  <br />
+  <br />
+  <br />
+  <mat-form-field>
+    <mat-chip-list #chipList>
+      <mat-chip>Chip 1</mat-chip>
+      <mat-chip>Chip 2</mat-chip>
+    </mat-chip-list>
+    <input [matChipInputFor]="chipList" />
+  </mat-form-field>
+</div>
+<br />
+<br />
+<div style="background-color: gray">
+  <mat-form-field class="example-chip-list">
+    <mat-chip-list #chipList>
+      <mat-chip
+        *ngFor="let fruit of fruits"
+        [selectable]="selectable"
+        [removable]="removable"
+        (removed)="remove(fruit)"
+      >
+        {{ fruit.name }}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input
+        placeholder="New fruit..."
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="add($event)"
+      />
+    </mat-chip-list>
+  </mat-form-field>
+</div>
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<h2>Spinner</h2>
+<div style="background-color: honeydew">
+  <mat-spinner></mat-spinner>
+</div>
+
+<h2>Spinner another type</h2>
+<button mat-button (click)="showSpinner()">show Spinner</button>
+<!--  spinner added -->
+<ng4-loading-spinner
+  [timeout]="8000"
+  [loadingText]="'Please wait...'"
+  [template]="template"
+></ng4-loading-spinner>
+<!-- spinner will progess 8 times ,Default is 5000 ms
+   refer = https://www.npmjs.com/package/ng4-loading-spinner-->
+
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div style="background-color: rgb(228, 233, 240)">
+  <h2>Progress bar</h2>
+  <h2>Loading Please wait</h2>
+  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+</div>
+
+<div style="background-color: rgb(228, 233, 240)">
+  <h2>Indeterminate Progress bar</h2>
+  <mat-progress-bar
+    mode="indeterminate"
+    style="position: relative; height: 4px"
+  ></mat-progress-bar>
+</div>

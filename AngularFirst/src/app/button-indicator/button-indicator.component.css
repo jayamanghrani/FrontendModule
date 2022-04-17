@@ -1,0 +1,18 @@
+.example-chip-list {
+  width: 100%;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+  background-color: #b0c1d8;
+  color: rgb(230, 123, 36);
+  height: 24px;
+  position: relative;
+}
+
+.mat-progress-bar {
+  height: 24px !important;
+}
+
+.mat-progress-bar-fill::after {
+  background-color: #ad2368 !important;
+}

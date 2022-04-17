@@ -1,0 +1,273 @@
+<mat-card class="example-card">
+  <h2>Mat card</h2>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+
+  <img
+    mat-card-image
+    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+    alt="Photo of a Shiba Inu"
+    style="position: relative; height: 250px"
+  />
+
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz
+      breeds of dog from Japan. A small, agile dog that copes very well with
+      mountainous terrain, the Shiba Inu was originally bred for hunting.
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div
+  style="
+    background-color: rgb(231, 128, 128);
+    width: 500px;
+    position: relative;
+    top: -500px;
+  "
+>
+  <h2>Mat list with divider</h2>
+  <mat-list>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
+  <br /><br />
+  <h2>Simple Mat list</h2>
+  <mat-list>
+    <mat-list-item> Pepper </mat-list-item>
+    <mat-list-item> Salt </mat-list-item>
+    <mat-list-item> Paprika </mat-list-item>
+  </mat-list>
+  <br /><br />
+
+  <h2>Navigation list</h2>
+  <mat-nav-list>
+    <a mat-list-item *ngFor="let link of links" (click)="Navigation(link)">
+      {{ link }}
+    </a>
+  </mat-nav-list>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<mat-accordion style="position: relative; top: -380px">
+  <h2>Expansion</h2>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Personal data </mat-panel-title>
+      <mat-panel-description> Type your name and age </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="First name" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Age" />
+    </mat-form-field>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<br />
+<br />
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div
+  style="
+    background-color: rgba(184, 180, 172, 0.24);
+    position: relative;
+    top: -400px;
+  "
+>
+  <h2>Grid</h2>
+  <!-- cols value means partition value  and 2:2 means  cloumn height:row height-->
+  <mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile style="background-color: burlywood"
+      >Notifications</mat-grid-tile
+    >
+    <mat-grid-tile style="background-color: rgb(233, 200, 158)"
+      >Messages</mat-grid-tile
+    >
+    <mat-grid-tile style="background-color: rgb(224, 202, 173)"
+      >About US</mat-grid-tile
+    >
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list>
+
+  <br /><br />
+  <h2>Grid with manual value</h2>
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="3" [rowspan]="1">1 </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="2">2 </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="1">3 </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1">4 </mat-grid-tile>
+  </mat-grid-list>
+
+  <br /><br />
+  <h3>Grid with dynamic value</h3>
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color"
+    >
+      {{ tile.text }}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div
+  style="
+    background-color: rgba(238, 235, 229, 0.24);
+    position: relative;
+    top: -300px;
+    padding: 1rem;
+  "
+>
+  <h2>Stepper</h2>
+  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{ !isLinear ? "Enable linear mode" : "Disable linear mode" }}
+  </button>
+  <mat-horizontal-stepper
+    style="background-color: rgb(124, 95, 228)"
+    [linear]="isLinear"
+    #stepper
+  >
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Address"
+            formControlName="secondCtrl"
+            required
+          />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div
+  style="
+    background-color: rgb(160, 185, 233);
+    padding: 1rem;
+    position: relative;
+    top: -300px;
+  "
+>
+  <h2>Tabs</h2>
+  <mat-tab-group style="background-color: rgb(35, 37, 39); padding: 1rem">
+    <mat-tab label="First"> Content 1 </mat-tab>
+    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+  </mat-tab-group>
+</div>
+
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div
+  style="
+    background-color: rgb(242, 244, 248);
+    padding: 1rem;
+    position: relative;
+    top: -300px;
+  "
+>
+  <mat-tab-group dynamicHeight style="background-color: rgb(185, 184, 179)">
+    <mat-tab label="Short tab">
+      <div class="example-small-box mat-elevation-z4">Small content</div>
+    </mat-tab>
+    <mat-tab label="Long tab">
+      <div class="example-large-box mat-elevation-z4">Large content</div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div style="background-color: darkgray; position: relative; top: -200px">
+  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+      <button mat-icon-button disabled></button>
+      {{ node.name }}
+    </mat-tree-node>
+
+    <mat-tree-node
+      *matTreeNodeDef="let node; when: hasChild"
+      matTreeNodePadding
+    >
+      <button
+        (click)="tree1(node.name)"
+        mat-icon-button
+        matTreeNodeToggle
+        [attr.aria-label]="'Toggle ' + node.name"
+      >
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{ treeControl.isExpanded(node) ? "expand_more" : "chevron_right" }}
+        </mat-icon>
+      </button>
+      {{ node.name }}
+    </mat-tree-node>
+  </mat-tree>
+</div>

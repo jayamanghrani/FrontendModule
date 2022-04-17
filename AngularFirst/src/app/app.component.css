@@ -1,0 +1,144 @@
+h4 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+}
+h5 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150%;
+}
+.head {
+  /* text-align: center; */
+  background-color: #043758;
+  left: 10px;
+  width: 1300px;
+  border-radius: 4px;
+  cursor: default;
+  position: relative;
+}
+
+.pd-10 {
+  padding: 8px;
+}
+
+.displayname {
+  position: relative;
+  left: 430px;
+  width: 160px;
+  font-size: smaller;
+  padding-top: 2px;
+}
+
+.logout {
+  position: relative;
+  left: 410px;
+  color: white;
+  width: 65px;
+  height: 25px;
+}
+
+.logout:hover {
+  cursor: pointer;
+  color: #186fc5;
+  background-color: #dadada;
+}
+
+/* .head{
+    display: inline;
+    background-color: #186fc5;
+    border-radius:10px;
+    cursor: default;
+} */
+
+.title {
+  font-size: 15px;
+  color: white;
+}
+
+.user-detail {
+  margin-top: 5px;
+  text-align: right;
+  font-size: 15px;
+}
+.logout-btn {
+  font-size: 17px;
+  padding-top: 10px;
+  padding-left: 25px;
+  margin-top: 10px;
+  height: 35px;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  width: 100px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  color: #186fc5;
+  background-color: #dadada;
+}
+
+.logout-con {
+  padding: 0px;
+}
+
+.options {
+  position: relative;
+  left: 68px;
+  width: 700px;
+}
+
+.tabs-menu {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+.tab-head {
+  float: left;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border-radius: 5px;
+  font-size: small;
+}
+
+/* .tab-head:hover {
+  color: #186fc5;
+  background-image: linear-gradient(#e9eef5, #e9eef5);
+} */
+/* 
+.tab-head-active{
+    color:#186fc5;
+    background-image: linear-gradient( #e9eef5, #e9eef5);
+} */
+/* .tab-head-active:hover {
+  color: #186fc5;
+  background-image: linear-gradient(#e9eef5, #e9eef5);
+} */
+
+.tab-head-active {
+  color: white;
+  background-image: linear-gradient(#186fc5, #186fc5);
+}
+
+.tab-head:hover {
+  background-image: linear-gradient(#186fc5, #186fc5);
+}
+
+.tab-head-active:hover {
+  background-image: linear-gradient(#186fc5, #186fc5);
+}
+
+.tab {
+  /* background-color: #dadada; */
+  background-image: linear-gradient(#e9eef5, #f9f9f9);
+  border-radius: 0px 10px 10px 10px;
+  width: 1000px;
+}
+
+.foot {
+  font-weight: normal;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 10px;
+}

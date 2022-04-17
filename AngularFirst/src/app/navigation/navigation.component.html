@@ -1,0 +1,144 @@
+<button (click)="service()">Call service</button>
+<br />
+Response from backend service----------{{ serviceResponse }}
+
+<br />
+
+Id getting from routing path ----{{ routeid }}
+<br />
+<div style="background-color: gainsboro">
+  <h2>Menu</h2>
+  <br />
+  <button
+    mat-button
+    [matMenuTriggerFor]="language"
+    style="background-color: mediumblue; color: white"
+  >
+    Technology
+  </button>
+
+  <mat-menu #language="matMenu" (change)="onMenuClick(matMenu)">
+    <button mat-menu-item [matMenuTriggerFor]="UI">UI</button>
+    <button mat-menu-item [matMenuTriggerFor]="backend">Backend</button>
+  </mat-menu>
+
+  <mat-menu #UI="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="Angular">Angular</button>
+    <button mat-menu-item>Angular JS</button>
+    <button mat-menu-item>ReactJS</button>
+    <button mat-menu-item>HTML</button>
+    <button mat-menu-item>CSS</button>
+  </mat-menu>
+
+  <mat-menu #backend="matMenu">
+    <button mat-menu-item>JAVA</button>
+    <button mat-menu-item>SpringBoot</button>
+    <button mat-menu-item>PHP</button>
+    <button mat-menu-item>.Net</button>
+    <button mat-menu-item>JEE</button>
+    <button mat-menu-item>Spring MVC</button>
+    <button mat-menu-item>Python</button>
+  </mat-menu>
+
+  <mat-menu #Angular="matMenu">
+    <button mat-menu-item>Angular6</button>
+    <button mat-menu-item>Angular7</button>
+    <button mat-menu-item>Angular8</button>
+    <button mat-menu-item>Angular9</button>
+    <button mat-menu-item>Angular10</button>
+  </mat-menu>
+
+  <br /><br />
+  <br />
+
+  <h2>Menu With value</h2>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="clickmenu"
+    style="background-color: rgb(39, 114, 226); color: white"
+  >
+    Selected Menu
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <span> {{ selectedMenu }}</span>
+
+  <mat-menu #clickmenu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let item of menuListItems"
+      (click)="clickMenuItem(item)"
+      [disabled]="item.isDisabled"
+    >
+      <mat-icon>{{ item.menuIcon }}</mat-icon>
+      <span> {{ item.menuLinkText }}</span>
+    </button>
+  </mat-menu>
+  <br />
+  <br />
+  <div *ngIf="this.selectedMenu == 'AboutUs'">This is Menu for AboutUs</div>
+
+  <div *ngIf="this.selectedMenu == 'Settings'">This is Menu for Settingus</div>
+
+  <div *ngIf="this.selectedMenu == 'Help'">This is Menu for help</div>
+
+  <br />
+  <br />
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<mat-drawer-container class="example-container" autosize>
+  <h2>Side Drawer</h2>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <h2 style="background-color: white; color: black">
+      <b>Batch Notifications</b>
+    </h2>
+    <li>Spring and React Batch will start from 15th June</li>
+    <li>Front end framework Batch will start from 10th June</li>
+    <li>Java Batch will start from 15th June</li>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button
+      type="button"
+      mat-button
+      (click)="drawer.toggle()"
+      style="background-color: rgb(62, 226, 226); cursor: pointer"
+    >
+      Notifications
+    </button>
+  </div>
+
+  <br />
+  <br />
+</mat-drawer-container>
+
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<h2>Toolbar</h2>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <span>First Line</span>
+    <span class="example-spacer"></span>
+    <mat-icon
+      class="example-icon"
+      aria-hidden="false"
+      aria-label="Example heart icon"
+      >favorite</mat-icon
+    >
+    <mat-icon
+      class="example-icon"
+      aria-hidden="false"
+      aria-label="Example delete icon"
+      >delete</mat-icon
+    >
+  </mat-toolbar-row>
+</mat-toolbar>
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->

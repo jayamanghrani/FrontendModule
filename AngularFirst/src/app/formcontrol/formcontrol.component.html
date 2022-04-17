@@ -1,0 +1,258 @@
+<form [formGroup]="MyFormControl" (ngSubmit)="submit()">
+  <div style="background-color: rgb(218, 211, 200)">
+    <h4>Reactive Form</h4>
+    <br />
+
+    <!--this way of  <style type="text/css"> not used now  -->
+
+    <label style="color: #1976d2; width: 150px">Username</label>
+    <input type="text" formControlName="username" name="username" />
+
+    <br />
+    <!-- If  getting angular core theme error, then will have to add some themes in style.css  
+                                    +
+      And if we are using mat-form-field , then matInput is mandatory
+                                      +
+      Add 2 imports matformfield, matInput  in module file                               
+      
+      -->
+    <mat-form-field style="width: 400px">
+      <input
+        type="password"
+        matInput
+        placeholder="Password"
+        formControlName="password"
+        required
+        maxlength="10"
+        required
+      />
+    </mat-form-field>
+
+    <br /><br /><br />
+
+    <br />
+    welcome user-{{ username }}
+    <br />
+    Your password is-- {{ password }}
+  </div>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  <div style="background-color: rgb(238, 232, 221)">
+    <h4>Checkbox</h4>
+
+    <mat-checkbox checked="“true”" (change)="OnChange($event)"
+      >Check me onchange!</mat-checkbox
+    >
+    {{ checkboxval }}
+    <br />
+    <mat-checkbox indeterminate="“true”" (change)="OnChange($event)"
+      >Check me indeterminate</mat-checkbox
+    >
+    <br />
+    <mat-checkbox disabled="true" (change)="OnChange($event)"
+      >Check me disabled!</mat-checkbox
+    >
+
+    <br />
+    <br />
+  </div>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <br />
+  <br />
+  <div style="background-color: rgb(228, 221, 209)">
+    <mat-form-field>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Choose a date"
+        formControlName="date"
+        (click)="ondateClick()"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br />
+    Selected date is - {{ dateval }}
+  </div>
+  <button type="submit" class="submit">submit details</button>
+</form>
+
+<br />
+<br />
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<div style="background-color: rgb(236, 234, 229)">
+  <h4>Radio button</h4>
+
+  <mat-radio-group
+    aria-label="Select an option"
+    (change)="onRadioChange($event)"
+  >
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button value="female">Female</mat-radio-button>
+  </mat-radio-group>
+
+  <br />
+  Selected value: {{ radioval }}
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<br />
+<div style="background-color: rgb(185, 183, 178)">
+  <h4>1.Basic mat-select with string[]</h4>
+  <mat-form-field>
+    <mat-label>Favorite food</mat-label>
+    <mat-select (change)="onslectVal($event.value)">
+      <mat-option *ngFor="let food of Food" [value]="food">
+        {{ food }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  <br />
+
+  <h4>2 way data binding mat-select</h4>
+  <mat-form-field>
+    <mat-select [(value)]="selected">
+      <mat-option
+        *ngFor="let food of Food"
+        [value]="food"
+        (click)="onClickDropDown(food)"
+      >
+        {{ food }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  Selected value is -{{ selected }}
+  <br />
+  <!-- Value of mat-option is getting bind with value of mat select (selected=option.name) -->
+  <h4>3. mat-select with JSON list</h4>
+  <mat-form-field>
+    <mat-select [(value)]="selected1" placeholder="select value">
+      <mat-option
+        *ngFor="let option of list"
+        [value]="option.name"
+        (click)="onClickDropDown(option.name)"
+      >
+        {{ option.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+  Selected value by UI binded matselect -{{ selected1 }}
+  <br />
+  Selected value by variable way -{{ dropdownvalue }}
+  <br />
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<br />
+<br />
+
+<section style="background-color: rgb(211, 192, 158)">
+  <h2>Basic slider</h2>
+  &nbsp;&nbsp; &nbsp;&nbsp;
+  <mat-slider
+    thumbLabel
+    [displayWith]="formatLabel"
+    tickInterval="1000"
+    style="width: 300px"
+    min="1"
+    max="100000"
+  ></mat-slider>
+
+  <br />
+  <br />
+  <h2>slider With value</h2>
+
+  <!--input ka [(ngModel)]="sliddervalue   is binded with  slider ka [(ngModel)]="sliddervalue"-->
+  <!-- If have given same name in ngModel , then value will be binded -->
+
+  <h4>Mat Card</h4>
+  <mat-card>
+    <h4>Mat Card content</h4>
+    <mat-card-content>
+      <h4>
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;&nbsp; &nbsp;&nbsp; Section
+      </h4>
+      <section
+        class="example-section"
+        style="
+          background-color: rgb(25, 150, 150);
+          border-radius: 2rem;
+          color: yellow;
+        "
+      >
+        <mat-form-field class="example-margin">
+          <input
+            matInput
+            type="number"
+            placeholder="Value"
+            [(ngModel)]="sliddervalue"
+            (change)="sliderChange(sliddervalue)"
+          />
+        </mat-form-field>
+      </section>
+
+      <br />
+      Selected value is ={{ sliderinputvalue }}
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin" [(ngModel)]="thumbLabel"
+          >Show thumb label</mat-checkbox
+        >
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="result">
+    <mat-card-content>
+      <h2 class="example-h2">Result</h2>
+
+      <mat-slider
+        class="example-margin"
+        [disabled]="disabled"
+        [invert]="invert"
+        [max]="max"
+        [min]="min"
+        [step]="step"
+        [thumbLabel]="thumbLabel"
+        [tickInterval]="tickInterval"
+        [(ngModel)]="sliddervalue"
+      >
+      </mat-slider>
+    </mat-card-content>
+  </mat-card>
+
+  <br />
+  <br />
+</section>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<br />
+<br />
+
+<section style="background-color: rgb(216, 215, 212)">
+  <h2>Slidder Toggle</h2>
+  <mat-slide-toggle
+    [(ngModel)]="togglevalue"
+    (change)="slideToggle(togglevalue)"
+    >Slide me!</mat-slide-toggle
+  >
+  <br />
+  selected value {{ slidertoggleval }}
+</section>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<br />
+<br />
