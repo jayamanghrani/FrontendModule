@@ -1,0 +1,40 @@
+<div class="head bg-col-dark col-light col-md-12 pd-10">
+    
+    <div class="row">
+        <div class="col-md-6 title">Claim File Portal</div>
+                                           <!--<div class="col-md-6 user-detail" ><span >Welcome</span></div>-->
+    </div>
+</div>
+
+     <!--BODY--!st block-->
+     <div class="body"> 
+ 
+         <!--Tab inside body-->
+         <div class="tab" >
+         
+ 
+         <!--login heading div-->
+                 <div class="login-heading"> <h3>Login</h3></div>
+ 
+             <!--login form -->
+             <div class="login-form">
+       
+ 
+         <form [formGroup] ="LoginForm" method="post" (ngSubmit)="login()" style="min-width:150px; max-width: 600px; width:100%; left:10px;"> 
+
+             <mat-form-field  style="width:400px;">
+           <input type="text" matInput placeholder="Username" formControlName="username" required maxlength="15" required>
+            </mat-form-field>      
+             <br>
+           <mat-form-field  style="width:400px;">
+            <input type="password"  matInput placeholder="Password" formControlName="password"  required maxlength="10" required>  
+            </mat-form-field>
+             <!-- Login button  inside login form-->
+                 <button class="login-button-div" type="submit" >Login</button>   
+         </form> 
+         </div>
+         </div>
+    <!--  spinner added -->
+    <ng4-loading-spinner ></ng4-loading-spinner>
+
+     </div >

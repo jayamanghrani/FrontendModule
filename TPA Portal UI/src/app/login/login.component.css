@@ -1,0 +1,165 @@
+.head{
+    /* text-align: center; */
+    background-color:#043758;
+   
+    border-radius:10px;
+    cursor: default;
+    position: relative;
+    height: 40px;
+}
+
+.heading
+{
+    position: relative;
+     left:20px;
+     top: 32px;
+     width: 1200px;
+      height:40px; 
+      background-color: #004b7c;
+      right: 30px;;
+
+}
+
+.heading1
+{
+
+    position: relative;
+    width: 200px; 
+    height:35px; 
+    left:25px;
+     color: white; 
+     background-color:#004b7c;
+}
+
+.body
+{
+    position: relative;
+    top: 18px;
+    width: 1000px;
+    left:70px;
+    height:410px;
+    background-color:white; 
+}
+
+.tab
+{
+    position: relative;
+    top: 25px; 
+    /* border: 1px solid #ccc;  */
+    border:1px solid #ccc !important;
+    border-radius: 10px;
+    width: 530px; 
+    left:300px; 
+    height:310px; 
+    background-color:white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+
+.login-heading
+{
+    position: relative;
+    width: 80px;
+     left:220px;
+     top: 10px;
+      height:20px; 
+      color: #004b7c;
+      font-size: 1.23em;
+}
+
+
+.login-form
+{
+    position: relative;
+    top:45px;
+    width: 400px; 
+    left:56px; 
+    height:240px;
+     background-color:white;
+
+}
+
+.username-div
+{
+    position:relative;
+    top:50px; 
+    width:500px; 
+    left:20px;
+    height:30px;
+    background-color:white;
+
+}
+
+.password-div
+{
+    position:relative;top:50px; width:500px; left:20px; height:30px; background-color: white;
+
+}
+
+.login-button-div
+{
+    position:relative;
+     border: 0.5px solid #2E639A; 
+     border-radius: 10px;
+     top:40px;
+      width:420px;
+       left:0px;
+       height:40px; 
+       background-color:rgb(46, 78, 109) !important;
+       color: white;
+ 
+}
+
+
+.login-text-div
+{
+    color: white; position:relative; left:220px; top:5px; width:45px; font-size: large;
+
+}
+
+
+
+.input-group-addon {
+    padding: 2px 2px 2px 2px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+}
+
+.pwd-group-addon {
+    padding: 1px 3px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+}
+
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+}
+
+.mat-input-element {
+    font-size: smaller;
+}

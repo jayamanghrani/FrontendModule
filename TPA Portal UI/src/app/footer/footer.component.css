@@ -1,0 +1,11 @@
+
+.foot{
+    position: relative;
+    font-weight: normal;
+    text-align: center;
+    font-size: 14px;
+    margin-top:10px;
+    border-radius:10px;
+    background-color:#043758;
+    color: white;
+}

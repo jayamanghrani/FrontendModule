@@ -1,0 +1,79 @@
+<form [formGroup] = "TPAUploadForm"  id="UploadForm" method="post" enctype="multipart/form-data" 
+                (ngSubmit)="validateUpload()">
+               
+                      <div class="file-row-detail">
+
+                        <div class="fileType">
+                        <label class="fontLabel" *ngIf="label">File Type </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;       
+                        <label class="fontLabel" *ngIf="label">{{uploadType}}</label>
+                        </div>
+
+                    
+                       <mat-form-field class="clmFolders" style="width:170px; top: 20px; left: 20px;" *ngIf="showUploadFolder"> 
+                      <mat-label style="color: #1976d2; width: 150px;">Select Claim Type</mat-label> 
+                      <mat-select formControlName="claimuploadType" name="claimuploadType" style="width:150px; font-size: small;">
+                      <mat-option *ngFor="let claimuploadType of this.ClaimUploadTypeList" [value]="claimuploadType" (click)="onselectedUploadFolder(claimuploadType)" style="font-size:small; font-weight: 740;"> 
+                      {{claimuploadType}}
+                       </mat-option>     
+                      </mat-select>
+                      </mat-form-field> 
+                      
+
+<div>
+
+                           <div class="file-input"> 
+                              <label class="fontLabel">Filename</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="text"  formControlName="filename" name="filename"  style="background-color: white; width: 250px;" >  
+                              
+              
+                             </div>
+
+                     <div  class="Browse1"  *ngIf="showBrowse1" style="position: relative; width: 80px; top: 15px; left: 400px; color:  #1976d2;" >
+                    <label for="upload" class="file-upload__label width12" >&nbsp;Browse</label>  
+                    <input id="upload" class="file-upload__input" type="file" name="file" (change)="onSelectFile($event.target.files)">&nbsp;&nbsp;                  
+                  </div>   
+                  
+                  <div  class="Browse" *ngIf="!showBrowse1" style="position: relative; width: 80px; top: 81px; left: 400px; color:  #1976d2;" >
+                    <label for="upload" class="file-upload__label width12" >&nbsp;Browse</label>  
+                    <input id="upload" class="file-upload__input" type="file" name="file" (change)="onSelectFile($event.target.files)">&nbsp;&nbsp;                  
+                  </div> 
+
+                  <mat-error *ngIf="!fileValidity.valid" class="file-error-message">{{fileValidity.message}}</mat-error>  
+
+
+                  <button type="submit" class="submit">Upload</button>
+                <button type="button" class="btn reset-button" (click)="reset()" class="reset">Reset</button>
+          
+              
+              <!--  spinner added -->
+              <ng4-loading-spinner ></ng4-loading-spinner>
+
+                   <div class="ResponseContentInfo" *ngIf="showModal" style="color: red;">{{ResponseContent}} 
+                  </div>
+
+                   <div>
+                   <span style="color:#686868;font-weight: normal; color:red;font-size: small;position: relative; top: 170px;"> * Only "xlsx", "xls","xml","csv","pdf" file types are allowed.</span>
+                    </div>
+</div>
+
+                    </div>
+                                      
+                  </form> 
+
+               <br> <br> <br> 
+               
+               
+
+      
+
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

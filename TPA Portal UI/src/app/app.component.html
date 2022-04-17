@@ -1,0 +1,30 @@
+
+<app-header></app-header>
+
+  <main *ngIf="UserService.getUserStatus()" >  
+    <div class="head bg-col-light col-light col-md-12 pd-10">    
+        <div class="row">
+            <div class="col-md-4 title">Claim File Upload Portal</div>          
+            <div class="displayname">({{UserService.getName()}})</div>&nbsp;&nbsp;
+            <div class="logout" (click)="logout()">&nbsp;Logout </div>
+           
+
+        </div>
+       </div>
+    <br><br>
+
+    <div class="options">
+        <nav class="row" style="position: relative; height: 42px; width: 700px;" > 
+            <ul class="tabs-menu">
+                <li routerLink="/homeupload" routerLinkActive='tab-head-active' class="tab-head pd-10 bg-col-dark" style="background-color: #004b7c;">
+                    &nbsp;File Upload  
+                <li routerLink="/homesearch" routerLinkActive='tab-head-active' class="tab-head pd-10 bg-col-dark" style="background-color: #004b7c;">
+                     &nbsp;&nbsp;&nbsp;&nbsp;Search File 
+                </li> 
+            </ul>
+        </nav>
+    </div>
+
+</main>
+ <router-outlet></router-outlet> 
+<app-footer></app-footer>

@@ -1,0 +1,61 @@
+
+<div style="height: 80px; background-color: #e9eef5; width: 950px; left: 70px; position: relative;">
+  <br> 
+<form [formGroup] = "TPASearchForm"  id="SearchForm" method="post">  
+
+  <div class="search_detail"> 
+    <br>
+    &nbsp;&nbsp;&nbsp;
+ <mat-form-field class="clmFolders" style="width:150px; top: -25px;"> 
+<mat-label style="color: #1976d2; width: 150px;">Select Folder</mat-label> 
+<mat-select formControlName="FolderName" name="FolderName" style="width:150px; font-size: small;">
+<mat-option *ngFor="let FolderName of this.FolderList" [value]="FolderName" (click)="onselectedFolder(FolderName)" style="font-size:small; font-weight: 740;"> 
+{{FolderName}}
+ </mat-option>     
+</mat-select>
+</mat-form-field> 
+</div> 
+
+
+</form>  
+</div>
+
+
+ <!--  spinner added -->
+ <ng4-loading-spinner ></ng4-loading-spinner>
+
+
+<div style="background-color: #e9eef5; width: 950px; left: 70px; position: relative;"> 
+<div class="mat-elevation-z8"  *ngIf="userFlag" style="left: 7px; position: relative; width: 60%; border: 2px solid black;">
+<table mat-table [dataSource]="dataSource" >
+  <ng-container matColumnDef="filename">
+    <th mat-header-cell *matHeaderCellDef style="color: white;"> FileName </th>   
+    <td mat-cell *matCellDef="let element" style="color: #0379ef;"> {{element.filename}} </td>
+  </ng-container> 
+  <ng-container matColumnDef="Download">
+    <th mat-header-cell *matHeaderCellDef style="color: white;" >Download </th>    
+  <td mat-cell *matCellDef="let element" ><button style="color: #0379ef; font-size: small;" (click)="redirectToDownload(element.filename)">download</button></td>      
+  </ng-container>    
+
+   <tr mat-header-row *matHeaderRowDef="displayedColumns" style="background-color: #33688a; height: 40px;"></tr> 
+ <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>    
+ 
+</table> 
+</div> 
+</div> 
+<div [className]=" this.show ? 'pagination-show' : 'pagination-hide'" class="pagination-div">
+  <mat-paginator #paginator class="custom-mat-paginator"
+   [pageIndex]="0"  
+   [pageSize]="5" 
+   [pageSizeOptions]="[5, 10, 15]"   
+   [showFirstLastButtons]="true">     
+ </mat-paginator>
+ </div>  
+  
+
+ <div *ngIf="this.showdiv" style="position:relative; width: 950px; left: 70px; background-color: #e9eef5; padding-left: 30px;">No records found</div>  
+ 
+ <div *ngIf="!userFlag" style="background-color: #e9eef5; width: 950px; left: 70px; position: relative; height: 260px;" > 
+   </div> 
+ 
+ 

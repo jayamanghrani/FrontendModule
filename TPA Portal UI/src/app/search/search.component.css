@@ -1,0 +1,184 @@
+
+.search_detail
+{
+  /* background-color: #e9eef5;  */
+  width: 250px;
+  height: 55px;
+  position: relative; 
+  /* left: 70px;  */
+}
+
+.searchDetail
+{
+  
+  width: 950px;
+  height: 280px; position: relative;
+  
+
+
+}
+ 
+.fileType
+{
+
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 13px;
+  font-weight: normal;
+  color:  #1976d2;
+  width :700px;
+
+}
+
+.Search
+{
+    background-color:#e5ecf1; width: 900px; top:4px; height: 200px;
+     position: relative; left:100px;
+    
+}
+
+.Search_text
+{
+    width: 700px; left:10px; position: relative; height:40px; top:50px;
+
+
+}
+
+.Search_label
+{
+
+    /* padding-top: 3px; color: #1976d2; position: relative; top: 5px; left:10px; */
+
+    padding-top: 3px;
+    color: #1976d2;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    font-size: 13px;
+    font-weight: normal;
+    color:  #1976d2;
+}
+
+
+.file_upload_btn
+{
+
+  background-color:#749cc3; height: 28px; width: 90px; position: relative; cursor: pointer;
+   top: -1px;  padding-left: 10px; padding-top: 15px; 
+   border-radius: 5px;
+     box-shadow: 0 3px #b8d6f9;
+}
+
+.file_upload_btn:hover {background-color:#255d94;}
+
+.file_upload_btn:active {
+  background-color:#255d94;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
+
+.submit_btn
+{
+  top: 10px;
+    padding-left: 20px;
+    position: relative;
+    left: 380px;
+    color: white;
+    width: 90px;
+    height: 35px;
+    background-color: #1e4e7d;
+    cursor: pointer;
+
+}
+.search_btn
+{
+  background-color:#255d94; height: 28px; width: 90px; position: relative;  cursor: pointer; top: -44px;
+   left: 110px; padding-left: 10px; padding-top: 15px; color: white;
+   border-radius: 5px;
+   box-shadow: 0 3px #b8d6f9;
+
+}
+
+
+.search_btn:hover {background-color:#255d94;}
+
+.search_btn:active {
+  background-color:#255d94;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
+
+/* After bootstrap adding this css */
+
+table {
+  width: 100%;
+  position: relative; 
+  
+}
+.pagination-hide{
+  display: none;
+  color: black;
+}
+.pagination-show{
+  display: block;
+  color: black;
+  position: relative;
+  background-color:#e9eef5;
+  left:70px;
+  width:950px;
+}
+
+.mat-paginator{
+  color: black; 
+}
+
+td{
+  border: 2.5px solid #fff;
+  text-align: center;
+}
+
+tr.mat-footer-row, tr.mat-row {
+  height: 43px;
+} 
+ 
+.mat-column-filename{
+  /* width: 65%;   */
+  text-align: center;  
+}
+.mat-column-Download{
+  text-align: center;   
+}
+
+.mat-cell{
+  color: #234465;
+  background-color: #eef3f6;
+}
+
+
+
+
+
+
+
+.custom-mat-paginator{
+  display: flex;
+  align-items: center;
+ 
+  justify-content: flex-end;
+  min-height: 42px;
+
+  flex-wrap: wrap-reverse;
+  color: #000;
+  margin-right: 3%;
+  width: 570px; 
+  height: 4px;
+  left: 7px;    
+  top: -6px; 
+  position: relative;
+  border: 1px solid #043363;
+  background-color: #fff; 
+  border-top: none;
+}
