@@ -1,0 +1,22 @@
+/* 1. container 
+2. container fluid
+3.row
+4.col
+        a. simple column (col ) == divide in equal column width
+
+        b. conditional column (col-md or col-lg)
+                 if screen size will cross breakpoint md,lg then it will cover 100% width.
+
+        c. Combination column col-no. ex col-4 == 4 col milke 1 coloumn bnega
+
+        ques-  diff b/w col and col-12 ?
+        Ans - No difference , we can divide a column in 12 .
+        
+        
+        
+ 5. row-col-*  == to make pair of column in one row
+ 
+        ex. row-col-2 , make only 2 columns in one row
+        
+        
+*/

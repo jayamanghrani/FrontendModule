@@ -1,0 +1,12 @@
+/**
+  Imp is column because content column ke andr rehta h 
+
+If we want column, so first we will have to make it as child of row.
+First row have to create, then col will come
+
+*?1. if we want our row should divide in 2 -bootstrap will create 2 equal size column
+*?2. if we want our row should divide in 4 -bootstrap will create 4 equal size column
+
+
+*?if we don't want equal size column, this will require grid knowledge.
+*/

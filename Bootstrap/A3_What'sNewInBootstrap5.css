@@ -1,0 +1,43 @@
+/*
+What's new in bootstrap 5?
+
+
+1. Major rewrite of the entire framework.(imp changes given).
+
+2. New typography(typography means color, text, font, table,heading...0)
+
+3. Enchanced grid system.
+
+4.No jquery required anymore.(bootstrap 4 was using jquery, In bootstrap 4 we had to attach query file in it.)
+
+5. bootstrap5 has its own icon system.(earlier for icon, developer had to use font awesome, but now it has it's own like delete icon, heart icon)
+
+6. dropped support for internet explorer
+
+7. new logo.
+
+*/
+
+
+/*
+Bootstrap Alternatives--
+
+1.tailwind CSS
+
+2. Materialize
+
+3.Skeleton
+
+4.Pure.CSS
+
+5.Bulma
+
+6.BootFlat
+
+
+*/
+
+
+/* All these framework's use grid.So grid is very important */
+
+

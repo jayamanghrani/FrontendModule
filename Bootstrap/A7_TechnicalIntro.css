@@ -1,0 +1,71 @@
+/**
+ *TODO---> 2 imp -->Bootstrap Classes(css class which bootstrap has created for us ) + Grid system
+
+*? Bootstrap classes
+ 
+
+*? In bootstrap we have around 4000 class, but 4 are very imp-
+
+       1. "Container" or "Container-fluid"
+       2. "row"
+       3. "col"
+
+
+
+      *? What is Container?
+      component of web page , where we keep all our content.
+
+
+      *?Why required container?, what facilities given by bootstrap container?
+      1. wrap and contain our content, hmara data webpage se overflow nhi hoga.
+      2. provide padding(inside space in container and content) and margin(outside space in container) to our container.
+      3. help us center our content on the page.ex. https://jqueryuk.com
+      4.container are of 7 types but two are imp i.e--[fluid or fixed]
+
+
+      *?The class "container"
+
+      a) provide a responsive fixedwidth container.
+
+                     fixedwidth means at in range screen size, it will keep it's size fixed.
+
+                bootstrap ki nagro me 6 types ki devices hoti h
+
+                1) extra small <=575px  ex. jio phone
+
+                2) small screen devices >=576px && <768px (Feature phone)
+
+                3)medium devices  >=768 && <992px (Smart phones)
+
+                4)large -   992 && <1200px  (Tablet)
+
+                5)Extra devices  -  >=1200px && <1400px (Desktop/laptop)
+
+                6)extra extra large --->=1400px  (TV) ---->bootstrap 5 supports
+
+
+
+*?if website is opening in >= 1400px screen then bydefault it will take container width--1320px
+*?if website is opening in >= 1200px then bydefault it will take--1140px
+*?if website is opening in >= 992px then bydefault it will take--960px
+
+*?if website is opening in >= 768px then bydefault it will take--720px
+
+*?if website is opening >= 576px then  bydefault it will take --540px 
+
+*?if website is opening <= 576px then  bydefault it will take width--100% , will cover all horizontal space 
+
+
+*?If we want to check our website , it is responsive or not-?
+screenfly.org---website  , here give our url, it will check
+
+
+ye css me krne ke liye , we used marginleft-auto, marginright- auto 
+
+
+b) Max-width will vary at each breakpoint-- 
+breakpoints are--576px,768,992,1200,1400
+
+when we open our website on Tv and then in latop , in bootstrap terminilogy , breakpoint got changes, for user screen got changed.
+
+*/

@@ -1,0 +1,31 @@
+/*
+Bootstrap
+
+    open source(means it's code is freely available on internet)
+    HTML, CSS, Javascript framework for building responsive application on the web
+
+ Before bootstrap,
+ 
+        users was accessing applcation on desktop/laptop.
+        For mobile, developer was creating different application.
+        ex facebook---
+        desktop/laptop--facebook.com
+        mobile-m.facebook.com
+
+        But after mobile, tablet, smart telivesion, watch came.
+        By this way developer will have to create different application for all devices.
+
+So they came up with solution ---
+        To build smart website i.e. responsive website, 
+        which can adjust itelf according to the device screen size.
+
+ 
+ We have alternate option other than bootstrap --
+         media queries in css(@media)
+    
+    
+  But if we will use bootstrap , they will handle media queries internally.  
+
+*/ 
+
+

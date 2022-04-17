@@ -1,0 +1,26 @@
+/**
+*?generally, every web page has layout(divided in parts eg. udemy , you tube  --> in this some data is in column fashion).
+*?To make a proper layout of our website , we need row and col class.
+
+container ke andr row vala div aata h .
+
+row apne aap ko container ki width ke jitna strech krti h.
+row class ka kuch effect dikhega nhi unless until we give border to check 
+
+imp thing-
+kabhi bhi row ke andr data nhi dena chaheye.row ke andr col aana chaheye
+
+*? Flow---->    Container---row---col[row---col(data/content)]
+
+row = container and column ke andr rkhte h row ko 
+
+col =  row ke andar only
+
+container = inside body
+
+data/content==column ke andar
+
+
+
+har website row and column me divide rehti h, in website terminology it is layout.
+*/
