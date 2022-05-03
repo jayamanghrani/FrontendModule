@@ -1,0 +1,33 @@
+<style>
+
+.role-update{
+    min-height: 500px;
+    max-height: 550px;
+    /* width: 900px; */ 
+    overflow-y: auto;
+}
+.close-button-div{
+    float: right;
+}
+
+.close-button-div .close {
+    margin-top: -38%;
+    margin-right: -15%;
+    font-size: 2rem;
+    font-weight: 800;
+    float: right;
+}
+
+
+</style>
+<div class="close-button-div">
+    <button type="button" class="close" aria-label="Close" (click)="cancelRoleUpdtaeDialog()">
+            <span aria-hidden="true">&times;</span>
+            </button>
+</div>
+
+   
+     <div class="role-update">
+            <app-role-selector (requestRoleUpdtaeResponse)="showRequestId($event)"></app-role-selector>
+      
+</div>

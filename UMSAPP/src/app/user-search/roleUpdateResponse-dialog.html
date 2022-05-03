@@ -1,0 +1,84 @@
+<style>
+.modal-footer .ok-Modal{
+    justify-content: center;
+    border-top:0ch;
+}
+.error-div{
+    min-height:100px;
+    min-width:400px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 2%;
+    border:#1e4e7d 2px solid;
+    margin: 1%;
+}
+
+.inner-status{
+    font-weight: bold; 
+    padding: 6%;
+    color : red;
+    text-align: center;
+    font-size: 20px;
+} 
+.inner-header{
+    font-weight: bold; 
+    color : #1e4e7d;
+    text-align: center;
+    font-size: 20px;
+}   
+.btn-secondary {
+    color: #fff;
+    background-color: #234465;
+    border-color: #234465;
+    width: 68px;
+}   
+.btn-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}       
+</style>
+        
+
+<div *ngIf="data.hasOwnProperty('errorMessage') ; else successBox">
+  
+    <div class="close-button-div">
+            <button type="button" class="close" aria-label="Close" (click)="submitRoleUpdtaeResponseDialog()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <div class="container">
+        <div class="error-div" >
+            <div class="inner-header">Error</div>
+            <div class="inner-status"> {{data.errorMessage}} </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+
+<ng-template #successBox>
+    <div *ngIf="data != null">
+        <div class="modal-header">
+                    <h4 class="modal-title" style="font-weight: bold; color: #1e4e7d;">Role Update</h4>
+        </div>
+        <div class="modal-body">
+            <div><span style="font-weight: bold; color: #1e4e7d; ">Request Id : </span >
+                <label style=" font-weight: bold; color : #1e4e7d">{{data.requestId}}</label></div>
+            
+                <span style="font-weight: bold; color: #1e4e7d;">Status : 
+                        <label *ngIf="data.resultStatus === 'S' ; else failure">
+                            <span style="color : #1e4e7d"> Update Successful </span>
+                        </label>
+                        <ng-template #failure>
+                            <span style="color : red"> Update Failed </span>
+                        </ng-template>
+                    </span>
+        </div> 
+        <div class="modal-footer ok-Modal">   
+            <button class="btn btn-secondary" type="button" (click)="submitRoleUpdtaeResponseDialog()">Ok</button>
+        </div> 
+    </div>   
+</ng-template>
+        
