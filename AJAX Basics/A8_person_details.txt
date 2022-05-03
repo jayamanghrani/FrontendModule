@@ -1,0 +1,21 @@
+{
+    "name":"Ravi",
+    "age":30,
+    "projects":[
+                
+                    {
+                        "language":"Java SE",
+                        "name":"Tech Quizz App"
+                    },
+                    {
+                        "language":"Java EE",
+                        "name":"Tech Quizz App"
+                    },
+                    {
+                        "language":"Javascript",
+                        "name":"Weather App"
+                    }
+
+                ]
+
+}

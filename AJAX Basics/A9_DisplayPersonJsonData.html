@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap");
+
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      div {
+        background-color: bisque;
+        color: brown;
+        text-align: center;
+        height: 300%;
+      }
+
+      div#persondetail {
+        color: blueviolet;
+        font-weight: bold;
+      }
+      span {
+        color: darkorange;
+      }
+    </style>
+
+    <script>
+      // let endpoint = "A8_person_details.txt";
+      let endpoint =
+        "http://127.0.0.1:5500/JavascriptProjectLearning/AJAX/A8_person_details.txt";
+
+      function show() {
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = responsehandler;
+        xhr.open("GET", endpoint, true);
+        xhr.send(null);
+      }
+
+      function responsehandler() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          let jsonResp = xhr.responseText; // from server always we receive string , inside string we have json data.
+          const obj = JSON.parse(jsonResp);
+          console.log(obj);
+
+          let persondiv = document.getElementById("persondetail");
+          persondiv.innerHTML =
+            "<span>Name:&nbsp;</span>" +
+            obj.name +
+            "<br><span>Age:&nbsp;</span>" +
+            obj.age;
+
+          let prjArray = obj.projects;
+          let str = "";
+          for (let p of prjArray) {
+            str += p.name + ",";
+          }
+          persondiv.innerHTML += "<span>Projects:&nbsp; </span>" + str;
+        } else {
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Click the button to receive the person details from the server.</h2>
+
+      <input type="button" value="show date" onclick="show()" /><br /><br />
+
+      <div id="persondetail"></div>
+    </div>
+  </body>
+</html>
