@@ -1,3 +1,4 @@
+//!Assignment
 //! Requirement- want to create promise and if passing val(n) is even then promise should call resolve 
 //! otherwise it should call reject
 
@@ -9,11 +10,11 @@ function makePromise(n)
         let value =n;
         if(value%2==0)
         {
-            resolve("Hurray! I completed the prj");
+            resolve("Promise obj created with msg Hurray! I completed the prj");
         }
         else
         {
-            reject("sorry! couldn't complete the prj");
+            reject("Promise obj created with msg sorry! couldn't complete the prj");
         }
 
     });

@@ -1,7 +1,9 @@
 //! Promise is build in class in js.Promise is well suited for handling asynchronous operations.
 /**
+ *  promise class h to eska constructor hoga, that construction takes function as parameter.
+ * 
  es Promise class ka hmm bnayenge object 
-let p = new Promise(executor);
+let p = new Promise(executor/function);
 */
 
 
@@ -20,10 +22,11 @@ let p = new Promise(executor);
 1. Creating a promise
 2. Consuming a promise
 
+
+ promise class h to eska constructor hoga, that construction takes function as parameter.
+And that function is of 2 argument
     
-        let p= new promise(function(arg1,arg2)); --- promise class h to eska constructor hoga, 
-                                            that construction takes function as parameter.
-                                                And that function is of 2 argument
+        let p= new promise(myfunc(arg1,arg2)); 
 
                     arg1= function resolve
                     arg2 = function reject
@@ -43,12 +46,13 @@ let p = new Promise(executor);
                         }
                     }
 
-                    *? We can call like below-
-                    let p= new Promise(myfunc)
+     *? We can call like below-
+      let p= new Promise(myfunc)
 
-                    *?Alternate way 
 
-                    instead of myfunc as body, we can give body there only
+      *?Alternate way 
+
+      instead of passing myfunc in parameter, we can give body there only
 
      function makePromise()
     {    
@@ -91,7 +95,7 @@ working Steps of  executor/handler/callback
 //! 2. Consume:
 
 /*
-For consume , we need promise ka ref , i.e (p) which we have created at the time of promise creation.
+For consume , we need promise ka return value , i.e (p) which we have created at the time of promise creation.
 
 We can take that p 2 ways-
 
@@ -110,7 +114,7 @@ We can take that p 2 ways-
 b/c both are same -
 
 1. let d = new Date();
-        return p;
+        return d;
 
 
         v/s

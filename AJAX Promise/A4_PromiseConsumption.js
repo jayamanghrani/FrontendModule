@@ -13,8 +13,8 @@
    -> is a method
    ->takes 2 callback argument , let's assume name -- success and failure, these func can be anonymous(without name)
    ->method syntax [ p.then(success,failure) ]
-   -> if inside received promise obj, we have func call(resolve()) ,so  then() method will call success() fun
-   ->if inside received promise obj, we have func call(reject()) ,so then method will call failure fun.
+   -> {if inside received promise obj with  func call(resolve()) ,so}  then() method will call it's  success() fun
+   ->{if inside received promise obj, with func call(reject()) ,so} then method will call it's failure() fun.
 
 
    At the time of promise creation

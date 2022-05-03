@@ -7,22 +7,17 @@
 
 Example 1--- .
 
-function f1()
+function myfunc()
 {
     console.log("hello");
 }
 
-function setTimeout( fn)
-{
-.......
-}
+setTimeout(myfunc,2000)   f1 is callback 
 
- setTimeout(f1)   f1 is callback 
-
-after setTimeout call will complete , f1 will call --then hello will print.
+after 2 sec , f1 will call --then hello will print.
 
 Example 2---
-*? In ajax programming , we were using callbacks.
+*? In ajax programming also, we were using callbacks.
 
 xhr = new XMLHttprequest();
 xhr.onreadystatechange= responsehandler;
@@ -40,7 +35,7 @@ response handler is callback, which runs when we get value of readysate as serve
 */
 
 
-//! and This is Asynchronous Programming
+//! and This is Asynchronous Programming(means that code which will run in future, that code is not part of sequential flow)
 
 //! To simplify Ashynchronsys programming via callbacks , Javascript introduces concept of Promises
 
