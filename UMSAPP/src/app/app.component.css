@@ -1,0 +1,25 @@
+.active {
+border: solid 4px #0066a2;
+}
+.active1 {
+border: solid 4px #0066a2;
+}
+.active2 {
+border: solid 4px #0066a2;
+}
+.userName-span{
+  padding: 0% 1% 0% 0%;
+}
+.branchId-span{
+  padding: 0% 0% 0% 1%;
+}
+
+
+
+@media only screen and (max-width: 710px) {
+
+  div.empHome{
+    font-size: 20px;
+  }
+
+}

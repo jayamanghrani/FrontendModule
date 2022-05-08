@@ -1,0 +1,367 @@
+/* @import 'https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400'; */
+.inputDate {
+    font-family: 'Roboto';
+	color: #1976d2;
+    text-align: center;
+    font-size: 21px;
+    font-weight:100;
+  
+}
+
+table {
+	max-width:100%;
+	table-layout:fixed;
+	margin:auto;
+}
+th, td {
+    padding: 2px 4px 2px 4px;
+    border: 2px solid white; 
+    border-top: none;
+	/* border:1px solid #000; */
+}
+thead, tfoot {
+	background:#f9f9f9;
+	display:table;
+	width:100%;
+	width:calc(100% - 18px);
+}
+tbody {
+	overflow:auto;
+    overflow-x:hidden;
+	display:block;
+	width:100%;
+}
+tbody tr {
+	display:table;
+	width:100%;
+	table-layout:fixed;
+}
+
+
+
+
+
+td a { 
+    display: block; 
+    background-color: #eef3f6;
+    color: #1e4e7d;
+    padding-bottom: 1px;
+    padding-top: 1px;
+ 
+ }
+ td p{
+    display: block; 
+    background-color: #eef3f6;
+    color: #1e4e7d;
+    padding-bottom: 0px;
+    padding-top: 5px;
+
+ }
+ td{
+    background-color: #eef3f6;
+    color: #1e4e7d; border: 3px solid white; font-weight:100;
+    text-align: center;
+
+
+ }
+
+.exportExcel{
+    float: right;
+    margin-right: 1%;
+    background-color: #234465;
+    color: white;
+    width: 124px;
+    margin-top: 2%;
+    height: 38px;
+    border-radius: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
+  }
+
+  .exportExcel:hover{
+    background-color: #216ab3;
+  }
+
+
+
+/* #tableouter{
+    border: 4px solid #b14726;
+    background-color: #f2ddd9;
+    }
+
+    #tableheader{
+
+        background-color: #b14726;
+        color: #f2ddd9;
+        border: 3px solid white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 14px;
+        width: 98%;
+        margin-left: 1px;
+    
+    }
+    #tableheader div{
+
+        border: 2px solid white;
+      
+    } */
+    .detailsouter{
+        height: 218px;
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: block;
+        overflow-y: auto;
+        margin-left: 0px;
+        /* width: 100%; */
+     
+    }
+    
+.outertablerow{
+    height: 190px;
+    display: block;
+    width: 99.2%;
+    margin-left: 16px;
+    
+}
+#tablerow div{
+    border: 2px solid white;
+    word-wrap: break-word;
+
+}
+#tablerow{
+    font-weight: bold;
+    font-size: 13px;
+    color: #b14726;
+    text-align: center;
+    border: 1px solid white;
+    /* padding-top: 5px; */
+    width: 100.3%;
+    
+}
+div a { 
+    /* display: block; 
+     background-color: #f2ddd9;  
+    background-color: #7b787212;
+    color:#b14726;
+    padding-bottom: 1px;
+    padding-top: 1px; */
+    color: #234465;
+    background-color: #eef3f6;
+
+    display: block;
+    /* background-color: #06060512; */
+    /* color: #b14726; */
+    padding-bottom: 1px;
+    padding-top: 1px;
+ 
+ }
+ .TraceErrorMsg{ 
+    padding-left: 8%;
+    text-align: center;
+}
+
+
+.mat-header-decorator{
+    text-align: center;
+    /* font-weight: bold; */
+    color: white;
+    background-color: #234465;
+    font-size: 15px;
+  }
+  tr.mat-header-row {
+    height: 47px !important;
+}
+
+tr.mat-footer-row, tr.mat-row {
+    height: 34px !important;
+}
+
+  .show-detail{
+    /* background-color: #7b787212; */
+    color:#b14726;
+  }
+
+  .custom-mat-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 56px;
+    flex-wrap: wrap-reverse;
+    /* width: 100%; */
+    color: black;
+    margin-right: 3%;
+
+    width: 98%;
+    border: #1e4e7d 3px solid;
+    background-color: white;
+    border-top: none;
+}
+
+.mat-table-data{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 400px;
+    width:100%;
+    min-height: 100px;
+    /* background-color: #eef3f6; */
+}
+.pagination-hide{
+    display: none;
+    color: black;
+}
+.pagination-show{
+    display: block;
+    color: black;
+}
+
+/* mat-cell:first-of-type,mat-cell:last-of-type{
+    padding-left: 8px;
+} */
+
+.mat-paginator{
+    color: black;
+}
+/* .mat-sort-header-indicator {
+    color: white;
+} */
+.mat-cell{
+    color: #234465;
+    background-color: #eef3f6;
+}
+
+table.mat-table{
+    width:100%;
+}
+
+.show-error-div{
+    visibility:visible;
+    color: red;
+    padding-left: 8%;
+    text-align: center;
+}
+.hide-error-div{
+    visibility:hidden;
+    color: red;
+    padding-left: 8%;
+    text-align: center;
+}
+
+th.mat-sort-header-sorted {
+    color: white;
+}
+  th.mat-header-cell{
+    padding-left: 20px;
+}
+
+
+.mat-column-requestId, .mat-column-userId, .mat-column-branchId, .mat-column-requestBy, .mat-column-requestDate, .mat-column-requestedDetails{
+    width: 12%; 
+    text-align: center;  
+ }
+ .mat-column-requestReason{
+     width:28%;   
+     text-align: center;
+ }
+
+
+ .search-div{
+width:100%
+ }
+.search-form-field{
+    width: 23%;
+    margin-left: 1%;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 5px;
+    height: 60px;
+    margin-top: 1%;
+}
+.search-form-field div.mat-form-field-underline{
+    display: none;
+}
+.search-form-field div.mat-form-field-infix{
+   border-top: 0px;
+}
+.search-form-field div.mat-form-field-wrapper{
+    padding-bottom: 0px;
+}
+
+
+.main-div-outer{
+    border: #1e4e7d 3px solid;
+    width: 98%;
+    border-bottom: none;
+    padding-bottom: 1%;
+}
+
+.alert.is-critical, .is-critical.callout {
+    /* border-left: 8px solid #dd0031; */
+    background-color: rgba(221,0,49,.05);
+    padding: 8px;
+}
+
+.alert, .callout {
+    /* width: 39%;
+    margin-left: 20%; */
+    width: 39%;
+    margin-left: 26%;
+    margin-top: 33px;
+}
+
+.close-error-div .close {
+    margin-top: -7%;
+    margin-right: -3%;
+    font-size: 1.6rem;
+    font-weight: 800;
+    float: right;
+}
+
+td.mat-cell:last-of-type{
+    padding-right:0px;
+}
+td.mat-cell:first-of-type{
+    padding-left:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 710px) {
+
+    div.width6{
+        width: 100%;
+    }
+    div.mg-10{
+        padding-top: 0px;
+    }
+    div.mb-10, div.form-group{
+        margin-bottom: 0px;
+    }
+    /* div.form-group {
+        margin-bottom: 0px;
+    } */
+    div.mg-40 , div.mg-20 , input.mg-40, label.mg-40{
+        margin-top: 0px;
+    }
+    
+    
+    div.alert{
+    width: 70%;
+    margin-left: 12%;
+    margin-top: 3%;
+    }
+    
+    }

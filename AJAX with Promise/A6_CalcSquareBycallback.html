@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+            div{
+                background-color: azure;
+                height: 400px;
+                font-size: small;
+            }
+
+            span
+            {
+                color: brown;
+            }
+        </style>
+    </head>
+
+
+    </head>
+    <body>
+
+        <div id="container">
+            <h2>Click the button to receive the result of promise</h2><br>
+       Type Number:  <input type="text" id="Textval"></input><br>
+       <button onclick="doTask()">Show result</button><br>
+
+        <span id="currentval"></span><br>
+        <span id="sqaureval"></span>
+            </div>
+
+        <script>
+            let currentval=document.getElementById("currentval");
+            let sqaureval = document.getElementById("sqaureval");
+
+            function doTask()
+            {
+                let txtval=document.getElementById("Textval").value;    
+            //  This can also be done -->let txtval=document.querySelector("#Textval").value;    
+            currentval.innerHTML="Current value: "+txtval+"<br>";       
+               calculateSquare(txtval, displayRes)
+            }
+
+            function calculateSquare(txtval, displayRes)
+            {
+               //By setTimeout() o/p will come in future , this is asynchronous programming.
+               
+                setTimeout(()=>{ 
+                    let num = Number(txtval);
+                if(isNaN(num))
+                {
+                    displayRes("Can't calculate square of non numeric data!");
+                    return;
+                }
+                 displayRes(num*num);
+                },2000);
+            }
+      
+
+            function displayRes(result)
+            {
+                if(typeof result==="number")
+                {
+                    sqaureval.innerHTML="It's sqaure is "+ result;
+                }
+                else
+                {
+                    sqaureval.innerHTML=result;
+                }
+
+            }
+
+            </script>
+    </body>
+</html>

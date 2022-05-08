@@ -1,0 +1,61 @@
+#TollFree {
+   padding: 10px;
+   color: #ff0080;
+   /* margin-left:320px; */
+}
+.blue_bca {
+   color: #100bf1;
+}
+#headerRight{
+
+   
+}
+
+.logoutButton {
+    margin-top: 60px;
+   margin-left: 70%;
+   margin-right: 0px;
+   color: white;
+   position: absolute;
+   background-color: #358a13;
+   border: 3px solid #358a13;
+   padding: 3px;
+   padding-left: 2%;
+   padding-right: 3%;
+   /* border-radius: 3%; */
+   color: white;
+}
+#logoutImg {
+   /* background: url("logout-xxl.png") no-repeat scroll; */
+   background-position: -220px -2px;
+   float: left;
+   width: 20px;
+   height: 18px;}
+
+/* .logoutButton2{
+   margin-top: 60px;
+   margin-left: 83%;
+   margin-right: 0px;
+   color: white;
+   position: absolute;
+   background-color: #186fc5;
+   border: 3px solid #186fc5;
+   padding: 3px;
+   padding-left: 2%;
+   padding-right: 3%;
+  
+   color: white; 
+   
+} */
+
+.logoutButton2 {
+   margin-top: -38px;
+   margin-left: 86.5%;
+   position: absolute;
+   background-color: #104e8c;
+   border: 3px solid #0a4d8e;
+   padding: 3px 3% 3px 2%;
+   color: #fff;
+   font-weight: 700;
+   float: right;
+}

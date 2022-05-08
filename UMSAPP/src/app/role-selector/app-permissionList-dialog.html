@@ -1,0 +1,201 @@
+<style>
+.main-div{
+    width: 680px;
+    height: 720px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.perm-search-det-head{
+    box-shadow: 5px 5px #888888;
+    border-radius: 2px;
+    border-style: outset;
+    border-color: #234465;
+    width: 19%;
+    height: 38px;
+    font-size: 1em;
+    margin-top: -40px;
+    background-color: #234465;
+    color: white;
+    z-index: 1;
+    padding: 5px;
+    text-align: center
+}
+.perm-search-det{
+    background-color: #ecebf1;
+    margin-left: 1%;
+    width: 105%;
+    padding: 10px;
+    border-style: ridge;
+    border-color: #234465;
+    border-radius: 5px;
+    font-family: "Robocon reg";
+    margin-top: 40px;
+    color: #234465;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+.form-control{
+    margin-right:11px;
+}
+
+.permission-div{
+    height: 500px; 
+}
+.permission-div-table{
+    /* width : 90%; */
+    height: 430px; 
+    overflow-y: auto; 
+    border: black 2px solid;
+}
+.permission-submit-div{
+    /* width : 90%; */
+    height: 30px;
+
+}
+tr:hover{
+    background-color: darkgray;
+}
+#Submit{
+    width: 12%;
+    margin-left: 18%;
+    margin-right: 25%;
+    margin-top: 15px;
+    color: #fff;
+    background-color: #234465;
+    border-color: #212529;
+}
+#Submit:hover{
+    background-color: #3a85e8;
+}
+
+#Cancel{
+    margin-top: 15px;
+    color: #fff;
+    background-color: #234465;
+    border-color: #212529;
+    margin-left: 25%;
+}
+#Cancel:hover{
+    background-color: #606367;
+}
+
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #234465;
+}
+
+.role-permission-dialog .mat-dialog-container {
+    padding: 10px;
+    background-color:#234465;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #234465;
+    border-color: #212529;
+}
+.close-button-div .close {
+    margin-top: -2%;
+    margin-right: 0%;
+    font-size: 2rem;
+    font-weight: 800;
+    float: right;
+}
+.table{
+    margin-bottom: 0px; 
+}
+        
+        </style>
+        
+        
+       
+        <div class="main-div">  
+            <div class="close-button-div">
+                <button type="button" class="close" aria-label="Close" (click)="cancelPermisssionList()">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+        </div>
+            
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+        
+                        <div class="perm-search-det clearfix"><!--*ngIf="this.show"> -->
+                            <div class="perm-search-det-head">
+                                <label> Permisssion list</label>
+                            </div>
+                            <br>
+                            <div class="search-det-fields-left" >
+                                <div class="search-det-left-field">
+                                    <div  class="input-group"  >
+                                    
+                                        <label style="margin-left: 30%; font-size:17px">Search  </label>
+                                        <input type="text" [(ngModel)]="search" placeholder="Type Permission List to search" class="form-control" style="margin-left: 4%;"
+                                        (keyup)="searchPermissionList()" 
+                                    
+                                        >
+
+                                        
+                                               
+                                    </div>
+                                </div>
+                            </div>    
+                        
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+        
+                         <div class="dialog-div" *ngIf="showList">
+                                <div class="permission-div" >
+                                        <table class="table table-striped">
+                                                <thead class="thead-dark">
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Permission List Name</th>
+                                                            <th>Permission List Description</th>
+                                                        </tr>
+                                                </thead>
+                                        </table>
+                                    <div class="permission-div-table">
+                                        
+                                        <table class="table table-striped" >
+                                            
+                                            <tbody>
+                                                <tr *ngFor="let abc of permissionListToShow">
+                                                    <td>
+                                                        <input type="radio" name="permissionCheck" id={{abc.plName}} (change)="onSelectChange(abc.plName)"/>
+                                                    </td>
+                                                    <td>
+                                                        {{abc.plName}}
+                                                    </td>
+                                                    <td>
+                                                        {{abc.plDesc}}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <div class="clearfix permission-submit-div">
+                                        <button type="button" class="btn btn-primary submit" id="Submit"
+                                                name="PermissionListSubmit" (click)="submitPermisssionList()">Submit</button>
+                                        <button type="button" class="btn btn-primary cancel" id="Cancel"
+                                                name="PermissionListSubmit" (click)="cancelPermisssionList()">Cancel</button>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                    </div>
+        
+        
+          </div>      

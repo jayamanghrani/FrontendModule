@@ -1,0 +1,99 @@
+<!-- 
+    
+Refer code , which we have created previously
+
+A5_IndiaDateTime.html  in AJAX Basics folder   , 
+
+Modify this code with promise
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DateandTime</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap");
+
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      div {
+        background-color: bisque;
+        color: brown;
+        text-align: center;
+        height: 100%;
+      }
+
+      span {
+        color: blueviolet;
+        font-weight: bold;
+      }
+    </style>
+    <script> 
+
+      function show() {
+        let endpoint = "https://worldtimeapi.org/api/timezone/Asia/Kolkata";
+        let currentdatetime = document.getElementById("currentdatetime");
+        let pr= load(endpoint);
+        pr.then((res)=>{   //our resp is in string , with json style
+        const obj=JSON.parse(res);
+        let today = new Date(obj.datetime);
+        currentdatetime.innerHTML =today.toDateString() + "," + today.toLocaleTimeString();
+
+        }).catch((res)=>{
+            alert("Sorry,the request cann't be fulfilled\n Reason"+res);
+        });
+      }
+
+      function load(url)
+    {
+        return new Promise(function(resolve,reject){
+
+            xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+
+                let str = xhr.responseText;
+          console.log("Response" + str);
+
+                    if(xhr.readyState===4 && xhr.status==200)
+                    {
+                        console.log("connection success");
+                        resolve(xhr.responseText);
+                    }
+                    else if(xhr.readyState===4 && !xhr.status==200)
+                    {
+                        console.log("connection success but no o/p ");
+                        reject(xhr.statusText);
+                    }
+            };
+            xhr.open("GET", url, true);
+            xhr.send(null);
+        });
+
+
+    } 
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h2>
+        Click the button to receive the current date and time from the server.
+      </h2>
+
+      <input
+        type="button"
+        value="show date and time"
+        onclick="show()"
+      /><br /><br />
+
+      <span id="currentdatetime"></span>
+    </div>
+  </body>
+</html>

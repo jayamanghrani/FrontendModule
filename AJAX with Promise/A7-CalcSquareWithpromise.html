@@ -1,0 +1,91 @@
+<!-- Same code we can write with promise. -->
+
+<!-- 
+Kya previous code me promise lg sakta h ?
+Hr us code me promise lg sakta h jisme asynchronous programming ho rhi ho
+-->
+
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+            div{
+                background-color: azure;
+                height: 400px;
+                font-size: small;
+            }
+            span
+            {
+                color: brown;
+            }
+        </style>
+    </head>
+
+
+    </head>
+    <body>
+
+        <div id="container">
+            <h2>Click the button to receive the result of promise</h2><br>
+       Type Number:  <input type="text" id="Textval"></input><br>
+       <button onclick="doTask()">Show result</button><br>
+
+        <span id="currentval"></span><br>
+        <span id="sqaureval"></span>
+            </div>
+
+        <script>
+           
+           let currentval=document.getElementById("currentval");
+            let sqaureval = document.getElementById("sqaureval");
+
+            function doTask()
+            {
+                //  -->let txtval=document.getElementById("Textval").value;    
+            let txtval=document.querySelector("#Textval").value;    
+           
+             let p= calculateSquare(txtval);
+
+             // this below then code will run in future, once we will get resp in p
+                p.then(
+                    (msg)=>{
+                        sqaureval.innerHTML= "Its square is"+msg;
+                    },
+                    (msg)=>{
+                         sqaureval.innerHTML= msg;
+                        });
+
+                 console.log("This line will print before msg on display's screen");  
+                 currentval.innerHTML="Current value: "+txtval+"<br>";            
+            }
+
+            function calculateSquare(txtval)
+            {
+            
+                  return new Promise((resolve,reject)=>{
+
+                    setTimeout(()=>{
+
+                            if(isNaN(txtval))
+                            {
+                            reject("Can't calculate square for non numeric no");
+                            }
+                            else
+                            {
+                                resolve(txtval*txtval);
+                            }
+                },2000);
+              });
+            
+            }
+
+            </script>
+    </body>
+</html>

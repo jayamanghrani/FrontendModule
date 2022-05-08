@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DateandTime</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap");
+
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
+
+      div {
+        background-color: bisque;
+        color: brown;
+        text-align: center;
+        height: 100%;
+      }
+
+      span {
+        color: blueviolet;
+        font-weight: bold;
+      }
+    </style>
+
+    <script>
+      let xhr, timeZoneName;
+      let endpoint = "http://worldtimeapi.org/api/timezone/";
+
+      window.onload = loadTimeZones; // jaise hi hmara window load ho then  fun loadTimeZones(callback) should run
+
+      function loadTimeZones() {
+        xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = processTimeZone;
+        xhr.open("GET", endpoint, true);
+        xhr.send(null);
+      }
+
+      function processTimeZone() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const timezoneArr = JSON.parse(xhr.responseText);
+
+          let selecttimeZonelist = document.getElementById("timezone");
+
+          let items = "";
+          timezoneArr.forEach((t) => {
+            items += ` <option>${t}</option>`; //$t it is template string, to get the value
+          });
+
+          selecttimeZonelist.innerHTML = items;
+        } else if (xhr.readyState === 4 && xhr.status !== 200) {
+          alert(
+            "Sorry,The request cannot be fulfilled ,Reason-" + xhr.statusText
+          );
+        }
+      }
+
+      function showData() {
+        // whenever we are genereting request, everytime create new xhr object, if we will use old one then  browser which  create xhr object for us , it can stale our previous object after communication
+        // if obj went in stale state by browser after 1 communication,then we will not get same object 2nd time
+        xhr = new XMLHttpRequest();
+        timeZoneName = document.getElementById("timezone").value;
+        let endpoint2 = endpoint + timeZoneName; //http://worldtimeapi.org/api/timezone/timeZoneName
+        xhr.onreadystatechange = showDateTimeHandler;
+        xhr.open("GET", endpoint2, true);
+        xhr.send(null);
+      }
+
+      function showDateTimeHandler() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const obj = JSON.parse(xhr.responseText);
+          console.log(obj); /*[abbreviation: "GMT"
+                                                    client_ip: "59.95.120.102"
+                                                    datetime: "2022-02-27T16:37:25.607189+00:00"
+                                                    day_of_week: 0
+                                                    day_of_year: 58
+                                                    dst: false
+                                                    dst_from: null
+                                                    dst_offset: 0
+                                                    dst_until: null
+                                                    raw_offset: 0
+                                                    timezone: "Africa/Abidjan"
+                                                    unixtime: 1645979845
+                                                    utc_datetime: "2022-02-27T16:37:25.607189+00:00"
+                                                    utc_offset: "+00:00"
+                                                    week_number: 8]*/
+
+          console.log(obj.datetime);
+
+          //But this datetime is not readable
+
+          let today = new Date(obj.datetime);
+          console.log("Today--------" + today);
+          console.log("Today toDateString-------" + today.toDateString());
+          console.log("toLocaleTimeString------" + today.toLocaleTimeString());
+
+          let dateTimespan = document.getElementById("currentdatetime");
+
+          // dateTimespan.innerHTML =
+          //   today.toDateString() + "," + today.toLocaleTimeString();
+          // Above code will always return indiatime, local specific time
+
+          dateTimespan.innerHTML =
+            today.toDateString() +
+            "," +
+            today.toLocaleTimeString("en-US", { timeZone: timeZoneName });
+        } else if (xhr.readyState === 4 && xhr.status !== 200) {
+          alert(
+            "Sorry,The request cannot be fulfilled ,Reason-" + xhr.statusText
+          );
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Select a timezone to view it'd date and time.</h2>
+
+      <select id="timezone"></select>
+
+      <input
+        type="button"
+        value="show Date Time"
+        onclick="showData()"
+      /><br /><br />
+
+      <span id="currentdatetime"></span>
+    </div>
+  </body>
+</html>

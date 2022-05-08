@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Josefin+Slab:wght@300&display=swap" rel="stylesheet">
+
+        <style>
+
+div#container
+{
+    background-color: #f8f8f8;
+    color: #2089b9;
+    text-align: center;
+    height: 100%;
+    padding-top: 30px;
+
+
+}
+*
+{
+    font-size: medium;
+}
+
+select
+{
+    font-size: 10px;
+}
+
+input,table
+{
+
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+span{
+
+    color: purple;
+    font-weight: bold;
+}
+
+input,#countries
+{
+height: 30px;
+
+}
+
+input{
+    width: 200px;
+}
+
+#counties
+{
+    width: 300px;
+}
+
+table
+{
+text-align: center;
+border-collapse: collapse;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+        </style>
+
+
+    </head>
+    <body>
+        <div id="container">
+            <h1>Country detail App</h1>
+            <input type="button" value="Load countries" onclick="loadCountries()"><br>
+          Select Country : <select id="countries" onchange="showDetails()"></select>
+            <div id="countryDetails"></div>
+        </div>
+
+
+        <script>
+ let selectcountryList;
+
+ let countriesArr;
+function loadCountries()
+{
+    let endpoint="https://restcountries.com/v2/all";
+     selectcountryList=document.getElementById("countries");
+    let pr=loadDataFromServer(endpoint);
+    pr.then((res)=>{
+         countriesArr=JSON.parse(res);
+
+        let countryNames="";
+
+        countriesArr.forEach(obj => {
+            countryNames+=`<option>${obj.name}</option>`
+            selectcountryList.innerHTML=countryNames;
+        });
+
+    }).catch((res)=>{
+        alert("Sorry,the request cann't be fulfilled\n Reason"+res);
+
+    });
+    
+
+}
+
+
+function loadDataFromServer(url)
+{
+    return new Promise(function(resolve,reject){
+
+         xhr= new XMLHttpRequest();
+        xhr.onreadystatechange= function(){
+            let str = xhr.responseText;     
+            if(xhr.readyState===4 && xhr.status==200)
+            {
+                    resolve(xhr.responseText);
+            }
+            else if(xhr.readyState===4 && !xhr.status==200)
+            {
+                reject(xhr.statusText);
+            }
+
+
+        };
+        xhr.open("GET",url,true);
+        xhr.send(null);
+
+
+    });
+
+}
+
+function showDetails()
+{
+    let countryIndex = selectcountryList.selectedIndex;
+
+    let Selectedcountrydetail= countriesArr[countryIndex];
+
+    console.log(Selectedcountrydetail.name+" "+Selectedcountrydetail.capital +" "+ Selectedcountrydetail.flags.png+" "+Selectedcountrydetail.currencies[0].name);
+
+    let myHtml = `<table border='2'>
+    <tr>
+        <th>Capital City</th>
+        <td>${Selectedcountrydetail.capital}</td>
+    </tr>
+    
+    <tr>
+        <th>Flag</th>
+        <td><img src='${Selectedcountrydetail.flags.png}'></td>
+     </tr>
+      
+     <tr>
+        <th>Currency</th>
+        <td>${Selectedcountrydetail.currencies[0].name}</td>
+    </tr>
+    
+    </table>`;
+
+    let div_countryDetails=  document.getElementById("countryDetails");
+    div_countryDetails.innerHTML=myHtml;
+
+}
+
+
+
+
+        </script>
+
+
+    </body>
+</html>

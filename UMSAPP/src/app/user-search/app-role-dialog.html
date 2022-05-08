@@ -1,0 +1,142 @@
+
+<style>
+    .dialog-div{
+        min-width: 400px;
+        overflow-y: auto;
+        max-height: 660px;
+        min-height: 100px;
+        padding: 2px;
+        border:#125292 3px solid;
+    }
+    .roleName{
+        font-size: 12px;
+        margin-bottom: 2px;
+    }
+    .container{
+        margin-top: 12px;
+    }
+    .close-button-div .close {
+        margin-top: -7%;
+        margin-right: -3%;
+        font-size: 2rem;
+        font-weight: 800;
+        float: right;
+    }
+    .mat-expansion-indicator{
+        color: white;
+    }
+    
+    .accordian-header{
+        background-color:#083d5f; 
+        height:35px;
+    }
+    
+    .mat-expansion-panel-header.mat-expanded:hover {
+      background:#083d5f;
+      color:white;
+    }
+    .mat-expansion-panel-header{
+        height:35px;
+    }
+    
+    .mat-expansion-panel-header.mat-expanded{
+        background: #083d5f;
+        color:white;
+    }
+    .mat-expansion-panel-header:hover{
+        background:#615c5b;
+        color:white;
+    }
+    .mat-expansion-panel:not(.mat-expanded) {
+        background:#1e61a2;
+        color:white;
+    }
+    .mat-expansion-panel.mat-expanded {
+        background:#1e4e7d;
+        color:white;
+    }
+    
+    .appName-span{
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    
+    .mat-expansion-panel-body {
+        padding: 1px 35px 1px;
+        background-color: #f2ddd9;
+        color: #1e4e7d;
+        font-weight: bold;
+    }
+    
+    .expanded-panel{
+        padding: 7px 35px 6px;
+        background-color: #eef3f6;
+        color: #1e4e7d;
+        font-weight: bold;
+        margin-left: -7%;
+        margin-right: -7%;
+        margin-bottom: -4%;
+    }
+    
+    .app-space-div{
+        margin:1%;
+    }
+    
+    .no-role{
+        color:#1e4e7d;
+        text-align: center;
+        padding: 3%;
+        font-size: 18px;
+    
+    }
+    .pending-label{
+        color: red;
+        padding-left: 10px;
+        font-style: italic;
+        font-weight: 100;
+        margin-bottom: 0px;
+    }
+    .mat-expansion-indicator::after {
+        color: white;
+    }
+    
+    </style>
+    
+    <div class="close-button-div">
+            <button type="button" class="close" aria-label="Close" (click)="onCloseCancel()">
+                    <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    
+    <div class="container">
+        <div class="dialog-div" > 
+            <div *ngIf="(this.data.appAndRoleAccessDetails | json) != '{}'; else noApps">
+                <mat-accordion>
+                    <div *ngFor="let roleData of this.data.appAndRoleAccessDetails | keyvalue;" class="app-space-div">
+                        <mat-expansion-panel (opened)="selectAppName(roleData.key)" >
+                            <mat-expansion-panel-header class="accordian-header" [collapsedHeight]="'35px'" [expandedHeight]="'35px'">
+                                <mat-panel-title>
+                                    <span class="appName-span"> {{roleData.key}} </span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <div *ngIf="this.rolesPresent ; else noRoles" class="expanded-panel" >          
+                                <div *ngFor="let item of rolesList | keyvalue; "> 
+                                    <p class="roleName">{{item.key}}<label class="pending-label" *ngIf="((item.value == 'R')||(item.value == 'I'))">(Requested)</label></p>
+                                </div> 
+                            </div> 
+                            <ng-template #noRoles>
+                                <span style="color:#1e4e7d"> No role present </span>
+                            </ng-template> 
+                        </mat-expansion-panel>
+                    </div>
+                </mat-accordion>
+            </div>
+            <ng-template #noApps>
+                    <div class="no-role"> No role present </div>
+            </ng-template>
+            
+        </div>
+    </div>
+    
+    
