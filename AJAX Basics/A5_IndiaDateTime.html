@@ -39,15 +39,14 @@
       function responsehandler() {
         if (xhr.readyState == 4 && xhr.status == 200) {
           let str = xhr.responseText;
-          console.log("Response" + str);
+          console.log("Response" + str);  //our resp is in string , with json style
           // {"abbreviation":"IST","client_ip":"61.0.146.80","datetime":"2022-02-22T12:35:41.637963+05:30","day_of_week":2,"day_of_year":53,"dst":false,"dst_from":null,"dst_offset":0,"dst_until":null,"raw_offset":19800,"timezone":"Asia/Kolkata","unixtime":1645513541,"utc_datetime":"2022-02-22T07:05:41.637963+00:00","utc_offset":"+05:30","week_number":8}
           // we need datetime
           //Use link-https://jsonformatter.org/
 
           console.log(typeof str); // response as a string aaya h , if obj hota to (.) lga ke nikal lete
 
-          // first we will convert string in obj
-
+          // first we will convert string in JS obj
           let obj = JSON.parse(str);
           console.log(obj);
           console.log(obj.datetime); //2022-02-22T12:43:19.757575+05:30

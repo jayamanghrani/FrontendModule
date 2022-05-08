@@ -35,7 +35,7 @@
     4.Square brackets hold array.
 
 
-    json data----{"name":"Ravi"}  // In this "" in keys also
+    json obj ----{"name":"Ravi"}  // In this "" in keys also
 
     JS obj ---{name,"Ravi"}
 
@@ -100,7 +100,7 @@ Imagine we received this text from web server.
                 '{"name":"Ravi","age":30,"city":"Delhi"}'
 
 
-     JSON.parse()---will convert it into object           
+     JSON.parse()---will convert it into Js object           
 
 
 */

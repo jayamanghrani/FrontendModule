@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Design Structure</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=PT+Serif&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
+
+<style>
+    *
+    {
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: 'PT Serif', serif;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-size: small;
+    }
+
+.study
+{
+    font-size: 9px;
+    font-family: 'Source Sans Pro', sans-serif; 
+
+}
+
+.mycol
+{
+border: 0.2px solid white;
+
+}
+
+#top li
+        {
+           list-style: none;
+           
+                    
+        }
+        #top,#top li
+        {
+            display: flex;
+           border: 1px solid white;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a{
+          color: white;
+        }
+
+    </style>
+
+
+</head>
+
+  <body>
+      <div class="container-fluid" style="background-color:black; color:white;">
+
+        <div class="row myrows">  
+            <div class="col-sm-1 mycol"><img src="./assests/mylogo.png" width="60px" height="25px">col-1</div>
+            <div class="col-sm-2 mycol"><h4><strong>My Website Designing</strong></h4> col-2</div>
+            <div class="col-sm-2 mycol">&nbsp; 
+                  <ul id="top">
+                  <li> <a href="#">Home</a></li>&nbsp;&nbsp;
+                  <li> <a href="#">Courses</a></li>&nbsp;&nbsp;
+                  </ul>
+                  col-2
+            </div>
+            <div class="col-md-4 mycol offset-md-1 study"> ---> offset-1 (1 gap) at left side only tillonly  medium screen size <br>  we can set col width as per our wish col-4} and by  col-md-4 Till medium screen size , col will divided like this , before medium size col will take 100% width</div>
+            <div class="col-md mycol study">we are using container fluid it is responsive & takes full width as screen size ,It generally used for nav bars </div>
+
+          </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+ <!-- container-fluid will cover all horizontal space. -->

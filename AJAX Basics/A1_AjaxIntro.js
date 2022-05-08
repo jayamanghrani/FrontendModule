@@ -4,7 +4,7 @@
             AJAX-- Asynchronous Javascript and xml
 
 *? synchronous- means step by step exceution (in coding)
-*?asynchronous- if step 1 is taking time to execute then step 2 will run it doesn't wait for step1
+*?asynchronous- some code which will run in future . if step 1 is taking time to execute then step 2 will run it doesn't wait for step1
 
 1. The main role of AJAX is to communicate with server.
 There are 3 ways to communicate with server--AJAx, Fetch, axios
