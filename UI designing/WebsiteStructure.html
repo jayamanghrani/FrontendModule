@@ -1,3 +1,7 @@
+
+
+
+
 <!doctype html>
 <html lang="en"> 
   <head>
@@ -16,26 +20,28 @@
     /* font-family: 'Nunito', sans-serif; */
     font-family: 'PT Serif', serif;
     /* font-family: 'Source Sans Pro', sans-serif; */
-    font-size: small;
+   /* font-size: smaller;  */
+   
     }
 
 .study
 {
-    font-size: 9px;
+   
     font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 9px;
 
 }
 
 .mycol
 {
-border: 0.2px solid white;
+border: 0.009rem solid #342929;
 
 }
 
 #top li
         {
            list-style: none;
-           
+          
                     
         }
         #top,#top li
@@ -44,10 +50,16 @@ border: 0.2px solid white;
            border: 1px solid white;
             padding: 0px;
             margin: 0px;
+            font-size: smaller;
         }
 
         a{
           color: white;
+        }
+
+        .Wname
+        {
+          font-size: small;
         }
 
     </style>
@@ -56,32 +68,56 @@ border: 0.2px solid white;
 </head>
 
   <body>
-      <div class="container-fluid" style="background-color:black; color:white;">
+    <header>
+      <div class="container-fluid " style="background-color:black; color:white;">
 
         <div class="row myrows">  
-            <div class="col-sm-1 mycol"><img src="./assests/mylogo.png" width="60px" height="25px">col-1</div>
-            <div class="col-sm-2 mycol"><h4><strong>My Website Designing</strong></h4> col-2</div>
-            <div class="col-sm-2 mycol">&nbsp; 
+            <div class="col-sm-1 mycol "><img src="./assests/mylogo.png" width="60px" height="25px">col-1</div>
+            <div class="col-sm-2 mycol"><scan class="Wname fw-light">My Website Designing</scan><br> col-2</div>
+            <div class="col-sm-2 mycol"> col-2&nbsp; 
                   <ul id="top">
-                  <li> <a href="#">Home</a></li>&nbsp;&nbsp;
-                  <li> <a href="#">Courses</a></li>&nbsp;&nbsp;
+                  <li> <a class="fw-lighter text-info" href="#">Home</a></li>&nbsp;&nbsp;
+                  <li> <a class="fw-lighter text-info" href="#">Courses</a></li>&nbsp;&nbsp;
+                  <li> <a class="fw-lighter text-info" href="#">Courses</a></li>&nbsp;&nbsp;
+              
                   </ul>
-                  col-2
+                 
             </div>
-            <div class="col-md-4 mycol offset-md-1 study"> ---> offset-1 (1 gap) at left side only tillonly  medium screen size <br>  we can set col width as per our wish col-4} and by  col-md-4 Till medium screen size , col will divided like this , before medium size col will take 100% width</div>
-            <div class="col-md mycol study">we are using container fluid it is responsive & takes full width as screen size ,It generally used for nav bars </div>
+            <div class="col-md-4 mycol offset-md-1 text-warning study "> ---> offset-1 (1 gap) at left side & visible  only till only  medium screen size <br><br>  we can set col width as per our wish col-4} and by  col-md-4 Till medium screen size , col will divided like this , before medium size col will take 100% width</div>
+            <div class="col-md mycol text-warning study ">we are using container fluid it is responsive & takes full width as screen size ,It generally used for nav bars </div>
 
           </div>
             </div>
+            </header>
 
-
-
-
-
-
-
-
-
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                  <div class="card">
+                    <div style="width: 100px; border: 4px solid #000">
+                      <img src="./assests/photo.jpg" class="img-fluid" />
+                    </div>
+                    <!-- <img class="card-img-top img-fluid" src="./assests/photo.jpg" alt="ProfilePhoto" /> -->
+                    <div class="card-body text-center">
+                      <!-- <img
+                        class="avatar rounded-circle"
+                        src="./assests/photo2.jpg"
+                        alt="Sachin"
+                      /> -->
+                      <h4 class="card-title">Jaya Manghrani</h4>
+                      <h6 class="card-subtitle mb-2 text-muted">Developer</h6>
+                      <p class="card-text">
+                        Senior developer with an experience of 3+ years and
+                        currently working as consultant at IBM.
+                      </p>
+                      <a href="#" class="btn btn-info">Follow</a>
+                      <a href="#" class="btn btn-outline-info">Message</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
 
 
 

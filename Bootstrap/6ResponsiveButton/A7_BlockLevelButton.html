@@ -1,0 +1,36 @@
+<!-- If we don't want that block level button should be of container size then 
+bootstrap 5 has given facility 
+
+<div class="d-grid gap-2 col-6 mx-auto"></div>
+
+d-grid  == to create block button
+gap-2  == gap b/w button
+col-6  = to make half width button . If we don't want our button to make as container's width
+mx-auto = margin x-axis auto ,means left right dono jadah same margin mile. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <title>BootStrap Buttons</title>
+  </head>
+
+  <body>
+    <div class="container bg-success">
+      <h2>Bootstrap Block Level Buttons</h2>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-primary">
+          Block level button
+        </button>
+        <button type="button" class="btn btn-secondary">
+          Block level button
+        </button>
+      </div>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
