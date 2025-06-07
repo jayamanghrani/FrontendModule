@@ -21,18 +21,4 @@ Node JS can do which Javascript can't do
 i.e. access to file 
 -> db access
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 */
