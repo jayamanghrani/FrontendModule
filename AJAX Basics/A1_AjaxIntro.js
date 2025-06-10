@@ -19,6 +19,8 @@ Yes, Earlier we were communicating server using Html <form>tag+submit button and
     Music will hang
                     In this approach, our whole page will refresh
 
+                    Ex. MusicPlay.html and A5_IndiaDateTime.html
+
 
 ------------------------------------------------------------------------------
 *? If JS want to tak to server then:

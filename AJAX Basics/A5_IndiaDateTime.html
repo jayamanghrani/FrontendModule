@@ -39,12 +39,12 @@
       function responsehandler() {
         if (xhr.readyState == 4 && xhr.status == 200) {
           let str = xhr.responseText;
-          console.log("Response" + str);  //our resp is in string , with json style
+          console.log("Response" + str);  //our resp is in JSON , with json style 
           // {"abbreviation":"IST","client_ip":"61.0.146.80","datetime":"2022-02-22T12:35:41.637963+05:30","day_of_week":2,"day_of_year":53,"dst":false,"dst_from":null,"dst_offset":0,"dst_until":null,"raw_offset":19800,"timezone":"Asia/Kolkata","unixtime":1645513541,"utc_datetime":"2022-02-22T07:05:41.637963+00:00","utc_offset":"+05:30","week_number":8}
           // we need datetime
           //Use link-https://jsonformatter.org/
 
-          console.log(typeof str); // response as a string aaya h , if obj hota to (.) lga ke nikal lete
+          console.log(typeof str); // response as a string aaya h ((JSON is purely a string)), if obj hota to (.) lga ke nikal lete
 
           // first we will convert string in JS obj
           let obj = JSON.parse(str);
@@ -71,6 +71,10 @@
   </head>
   <body>
     <div id="container">
+
+      <audio src="../UI designing/assests/firefox_jTNKUTPThy.mp4" controls></audio>  
+
+
       <h2>
         Click the button to receive the current date and time from the server.
       </h2>

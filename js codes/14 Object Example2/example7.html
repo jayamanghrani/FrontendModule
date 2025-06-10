@@ -11,8 +11,32 @@
             name: "sachin",
             gender: "male"
         };
-        document.write(`${JSON.stringify(person1)}<br>`);
-        document.write(`${JSON.stringify(person2)}`);
+
+let person3 = '{"name": "sachin","gender": "male"}';
+
+// document.write(typeof(person3));
+// document.write(JSON.parse(person3).name);
+// document.write(`${JSON.stringify(person2)}`);
+
+let loc=
+	[
+    {
+    wingId:["A","B"],
+    floorId:["1F","2F"],
+    campusId:"ETZ",
+    CityId:"PUN",
+    buildingId:"CONGO"
+    },
+    {
+      wingId:["A","B"],
+    floorId:["1F","2F"],
+    campusId:"ETZ",
+    CityId:"PUN",
+    buildingId:"CONGO"
+    }
+  ]
+
+ document.write(`${JSON.stringify(loc)}`);
     </script>
 </head>
 

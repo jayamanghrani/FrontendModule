@@ -26,12 +26,14 @@ let p = new Promise(executor/function);
  promise class h to eska constructor hoga, that construction takes function as parameter.
 And that function is of 2 argument
     
-        let p= new promise(myfunc(resolve,reject){}); 
+        let p= new promise(myfunc(a,b){........}); 
+
+
+
+                    *?Example--
 
                     arg1= function resolve
                     arg2 = function reject
-
-                    *?Example--
 
                     function myfunc(resolve,reject)
                     {
@@ -56,21 +58,21 @@ And that function is of 2 argument
 
      function makePromise()
     {    
-        let p = new Promise(function(resolve,reject){
+        let p = new Promise(Myfunction(resolve,reject){
+                    ----do some task----
+                    if(completed)
+                    {
+                        resolve();
+                    }
+                    else
+                    {
+                        reject(arg); 
+                    }
+                });
 
-            ----do some task----
-            if(completed)
-            {
-                resolve();
-            }
-            else
-            {
-                reject(arg); 
-            }
 
-        });
 
-        return p;
+        return p;   => return p me obj hoga, jiske andr call hoga either resolve ka ya reject ka.
     }
 
  And whatever task which we will do inside promise , It will have 2 states 

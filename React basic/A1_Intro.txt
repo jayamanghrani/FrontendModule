@@ -1,0 +1,89 @@
+
+Prerequisite for react is -
+1.html
+2. css 
+3.Javascript ES6 (let ,const , arrow)
+
+ =========================================================================================
+
+
+React is 
+
+1. Javascript popular library (set of predefine classed and functions)
+2. open source created by facebook
+
+-> react me build in features ko inherit krna pdta h , esliye react me class bnate h
+
+-> React sirf ek kaam krti h , easy and attractive user interface bnati h 
+
+-> React create SPA - if user click then it doesn't redirect to other page , only content will get change
+
+ =========================================================================================
+
+
+Challenges in SPA if not using React
+1. Jada Javasecript lgani pdegi , Jada DOM manupulation use hoga - jisse speed slow ho jayegi browser ki.
+
+2. keeping data sync with UI.
+
+ =========================================================================================
+
+React Advantages
+
+1. How React providing fast DOM Manipulation
+React ke pass apna virtual DOM rehta h , to agar thora sa bhi data change hota h 
+to react ka dom sirf us part ko refresh krta h.
+
+for ex--
+
+in javascript - In Todo App if we have 100 items in list ,
+ and we are deleting 1 iteam then  DOM will delete 1 item and redraw all 99 items.and browser will communicate with
+ DOm to display elements.
+
+in React - In Todo App if we have 100 items in list ,
+ and we are deleting 1 iteam then virtual DOM will delete 1 item 
+ and since 99 item has not been changes , virtual DOM will not repaint 99 items.
+ and virtual DOm will pass data to actual DOM and browser will communicate with
+ actual DOM to display elements.
+
+
+2. React is component based library.
+hmm esme components bnate h, function ke through ya classes ke 
+
+components ke pass attribute hote h -- called as props (shortcut of property)
+
+
+ =========================================================================================
+Is React is library or framework
+
+-> React aor angular dono SPA bnate h.
+
+But react me aapke pass freedom hota h , konsi library use krni h , kafi option available h
+
+Angular me usi solution ko use krna pdta h jo unhone diya h.unhi ke package use krte h.
+Achi baat h ye to , but hmne unhi opinion ko use krna pdta h.
+
+For ex- 
+
+1. react me form use krne ke liye 2 libraries h -React Hook form or Formik
+
+2. React me AJAX use krne ke liye - Fetch API or Axios or jquery AJAX
+and Angular me only $http
+
+
+Aor react me alg alg libraries programmer ko na download krna pde eske liye diya gya h ek tool - CRA
+
+CRA - Create React App
+
+ye on the fly libraries download krega use krne ke liye.
+=========================================================================================
+
+React History 
+
+Facebook created this library with version 0.3 in 2013
+now latest version is 18.0
+It updates very fast.
+
+Instagram , whatapp, Netflix dono ka web App ka frontend React pe h
+
+

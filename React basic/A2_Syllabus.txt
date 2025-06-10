@@ -1,0 +1,41 @@
+
+React basics----
+
+1. React Basics and Working with components
+
+2. React State and working with events.
+
+3. Rendering List and Conditional Content
+
+4. Understanding JSX
+
+5. Stateless Functional Components
+
+6. Web pack 
+
+7. Using React Create App
+
+8. Styling React
+
+9. React Router
+
+
+Advance Topics---
+
+1. Optimization Techniques
+
+2. React Hooks.
+
+3. Context
+
+4. Fragment
+
+5. Portal and Ref
+
+6. Redux
+
+7. React with Redux
+
+8. Sending HTTP request
+
+9. Working with Form and user Input
