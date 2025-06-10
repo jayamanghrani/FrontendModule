@@ -55,11 +55,11 @@ Hr us code me promise lg sakta h jisme asynchronous programming ho rhi ho
 
              // this below then code will run in future, once we will get resp in p
                 p.then(
-                    (msg)=>{
-                        sqaureval.innerHTML= "Its square is"+msg;
+                    (successmsg)=>{
+                        sqaureval.innerHTML= "Its square is"+successmsg;
                     },
-                    (msg)=>{
-                         sqaureval.innerHTML= msg;
+                    (failuremsg)=>{
+                         sqaureval.innerHTML= failuremsg;
                         });
 
                  console.log("This line will print before msg on display's screen");  

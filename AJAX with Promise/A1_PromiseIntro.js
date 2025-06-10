@@ -16,6 +16,8 @@ setTimeout(myfunc,2000)   f1 is callback
 
 after 2 sec , f1 will call --then hello will print.
 
+
+
 Example 2---
 *? In ajax programming also, we were using callbacks.
 
@@ -37,7 +39,7 @@ response handler is callback, which runs when we get value of readysate as serve
 
 //! and This is Asynchronous Programming(means that code which will run in future, that code is not part of sequential flow)
 
-//! To simplify Ashynchronsys programming via callbacks , Javascript introduces concept of Promises
+//! To simplify Asynchronsys programming via callbacks , Javascript introduces concept of Promises
 
 //! promise are alternate of callbacks.
 
